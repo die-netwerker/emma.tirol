@@ -1,0 +1,26 @@
+name: netwerk/text
+typeName: netwerk_text
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: subheader
+    type: Text
+    label: Subheader
+  -
+    identifier: header
+    type: Textarea
+    enableRichtext: false
+    rows: 2
+  - identifier: header_layout
+    useExistingField: true
+  - identifier: bodytext
+    type: Textarea
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: default

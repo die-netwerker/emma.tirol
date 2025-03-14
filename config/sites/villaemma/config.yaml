@@ -1,0 +1,18 @@
+base: 'https://emma.tirol.ddev.site/'
+dependencies:
+  - netwerk/nw-template
+disableStaticFileCache: false
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_AT
+    navigationTitle: Deutsch
+    flag: at
+    hreflang: de-AT
+    websiteTitle: ''
+rootPageId: 1
+txCsseoXdefault: 0
+websiteTitle: ''

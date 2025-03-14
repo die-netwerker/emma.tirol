@@ -1,0 +1,85 @@
+TCEFORM {
+
+  tt_content {
+
+    ### remove ctypes (http://better-code.com/typo3-template-tutorial/contentelemente-ausblenden/)
+    ### menu_sitemap
+    CType {
+      removeItems = header, text, image, textpic, textmedia, form_formframework, uploads, bullets, table, menu_abstract, menu_categorized_content, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap_pages, menu_categorized_pages, menu_subpages, menu_pages, felogin_login, news_pi1, news_categorylist, news_newsdatemenu, news_newssearchform, news_taglist, news_newssearchresult, news_newsselectedlist
+    }
+
+    ### ce layouts
+    layout {
+      removeItems = 1,2,3,4,5
+      altLabels.0 = Standard
+      #altLabels.1 = Ohne
+      #altLabels.2 = Gästebewertungen
+    }
+
+    ### ce frames
+    frame_class {
+      removeItems = none, ruler-before, ruler-after, indent, indent-left, indent-right
+      altLabels.default = Standard
+      #altLabels.none = Ohne
+      #addItems.small-width = kleine Breite
+    }
+
+    ### headlines
+    header_layout {
+      removeItems = 2,4,5,6
+      altLabels {
+        0 = H2
+        1 = H1
+        2 = H2
+        3 = H3
+        #4 = H4
+        #5 = H1 Optik
+        #6 = H6 mit CSS, blau 100% fett
+      }
+    }
+    header_position {
+      removeItems = left, right
+      altLabels {
+        Standard = Linksbündig
+        center = Zentriert
+        #right = Rechtsbündig
+      }
+    }
+
+    ### spaces
+   space_before_class {
+      altLabels {
+        extra-small = sehr klein (40px -> 20px)
+        small = klein (60px -> 30px)
+        medium = mittel (80px -> 40px)
+        large = groß (100px -> 50px)
+        extra-large = sehr groß (140px -> 70px)
+      }
+    }
+    space_after_class {
+      altLabels {
+        extra-small = sehr klein (40px -> 20px)
+        small = klein (60px -> 30px)
+        medium = mittel (80px -> 40px)
+        large = groß (100px -> 50px)
+        extra-large = sehr groß (140px -> 70px)
+      }
+    }
+
+  }
+
+  pages {
+    layout {
+      ### fe layouts
+      removeItems = 1,2,3
+      #addItems {
+      #	4 = Kein Bannerbild
+      #}
+      altLabels {
+        0 = Standard
+        #1 = ohne Banner
+      }
+    }
+  }
+
+}

@@ -1,0 +1,11 @@
+TCEMAIN {
+  clearCacheCmd = pages, all
+  table {
+    pages {
+      disablePrependAtCopy = 1
+    }
+    tt_content {
+      disablePrependAtCopy = 1
+    }
+  }
+}

@@ -1,0 +1,38 @@
+name: netwerk/hero
+typeName: netwerk_hero
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: header
+    type: Textarea
+    enableRichtext: false
+    rows: 2 
+  -
+    identifier: subheader
+    useExistingField: true
+  -
+    identifier: image
+    type: File 
+    label: 'Herobild'
+    useExistingField: false
+    maxItems: 1
+    allowed: common-image-types
+    cropVariants:
+      desktop:
+        title: Desktop
+        allowedAspectRatios:
+          desktop:
+            title: 2:1
+            value: 2 / 1
+      mobile:
+        title: mobile Version
+        allowedAspectRatios:
+          mobile:
+            title: 4:5
+            value: 4 / 5

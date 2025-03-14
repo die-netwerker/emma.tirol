@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:if condition="{menu}">
+        <ul class="navigation">
+            <f:for each="{menu}" as="menu">
+                <li>
+                    <a href="{menu.link}" class="menu-link menu-link{menu.data.uid}{f:if(condition:'{menu.active}', then:' active')}" title="{site.configuration.websiteTitle} - {menu.title}">{menu.title}</a>
+                </li>
+            </f:for>
+            <li><div class="open-modal">Kontakt</div></li>
+        </ul>
+    </f:if>
+</html>

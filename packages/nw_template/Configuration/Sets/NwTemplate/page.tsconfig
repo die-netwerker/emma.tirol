@@ -1,0 +1,3 @@
+@import 'EXT:nw_template/Configuration/TsConfig/TCEFORM.tsconfig'
+@import 'EXT:nw_template/Configuration/TsConfig/TCEMAIN.tsconfig'
+@import 'EXT:nw_template/Configuration/TsConfig/PageLayout/*.tsconfig'

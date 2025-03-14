@@ -1,0 +1,7 @@
+styles:
+  content:
+    defaultHeaderType: 1
+  templates:
+    layoutRootPath: EXT:nw_template/Resources/Private/ContentElements/Layouts/
+    partialRootPath: EXT:nw_template/Resources/Private/ContentElements/Partials/
+    templateRootPath: EXT:nw_template/Resources/Private/ContentElements/Templates/

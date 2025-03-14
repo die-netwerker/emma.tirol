@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')} {f:if(condition:'{data.hero}', then:' hero')}">
+        <f:asset.css identifier="image-round-text" href="EXT:nw_template/Resources/Public/Css/image-round-text.min.css" />
+        <f:if condition="{data.image}">
+            <picture>
+                <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'230c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'460c', cropVariant:'universal', fileExtension:'avif')} 2x" width="400" height="400">
+                <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'280c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'560c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <source media="(max-width: 1400px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'450c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'900c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'530c', cropVariant:'universal', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1060c', cropVariant:'universal', fileExtension:'avif')} 2x" width="530" height="530" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+            </picture>
+        </f:if>
+        <div id="text-right">
+            <f:if condition="{data.header}">
+                <header>
+                    <h3>{data.header}</h3>
+                </header>
+            </f:if>
+            <div id="text">
+                <f:if condition="{data.bodytext}">
+                    {data.bodytext -> f:format.html()}
+                </f:if>
+            </div>
+        </div>
+    </div>
+</html>

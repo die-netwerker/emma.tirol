@@ -1,0 +1,2 @@
+@import 'EXT:nw_template/Configuration/TypoScript/Setup/*.typoscript'
+@import 'EXT:cs_seo/Configuration/TypoScript/setup.typoscript'

@@ -1,0 +1,36 @@
+@use 'base';
+
+.frame-type-netwerk_text{
+    width: 100%;
+    padding: 1rem 10%;
+    color: base.$color_2;
+    header{
+        margin-bottom: 1.5em;
+        h1{
+            font-size: base.$fontsize_80;
+        }
+        h2, h3{
+            font-size: base.$fontsize_50;
+        }
+        h1, h2, h3{
+            font-weight: 300;
+        }
+        .subheader{
+            font-size: base.$fontsize_35;
+        }
+    }
+    .bodytext{
+        p + p, p + ul{
+            margin-top: 1em;
+        }
+        ul{
+            padding-left: 1em;
+        }
+        a{
+            color: base.$color_2;
+        }
+    }
+    @media(max-width: 430px){
+        padding: 3rem 5%;
+    }
+}

@@ -1,0 +1,24 @@
+# Import basic configuration
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+  config:
+    toolbar:
+      items:
+        - bold
+        - italic
+        - '|'
+        - subscript
+        - superscript
+        - '|'
+        - numberedList
+        - bulletedList
+        - '|'
+        - alignment
+        - '|'
+        - findAndReplace
+        - link
+        - sourceEditing

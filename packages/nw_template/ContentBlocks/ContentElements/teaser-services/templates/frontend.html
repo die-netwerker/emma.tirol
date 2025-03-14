@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')} {f:if(condition:'{data.hero}', then:' hero')}">
+        <f:asset.css identifier="teaser-services" href="EXT:nw_template/Resources/Public/Css/teaser-services.min.css" />
+            <ul class="items">
+                <f:for each="{data.items}" as="data">
+                    <li>
+                        <f:if condition="{data.image}">
+                            <picture>
+                                <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'350c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'7000c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                                <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'390', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'780', cropVariant:'desktop', fileExtension:'avif')} 2x" width="390" height="390" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+                            </picture>
+                        </f:if>
+                        <div id="text-right">
+                            <f:if condition="{data.title}">
+                                <p id="teaser-header">{data.title -> f:format.nl2br()}</p>
+                            </f:if> 
+                            <div id="text">
+                                <f:if condition="{data.text}">
+                                    {data.text -> f:format.html()}
+                                </f:if>
+                            </div>
+                        </div>
+                    </li> 
+                </f:for>
+            </ul>
+    </div>
+</html>

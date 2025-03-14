@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+    <f:section name="Main">
+        <div id="hero">
+            <f:for each="{hero}" as="hero">{f:cObject(typoscriptObjectPath:'tt_content.{hero.data.CType}', data:'{hero.data}', table:'tt_content')}</f:for>
+        </div>
+        <div id="main">
+            <f:for each="{content}" as="content">{f:cObject(typoscriptObjectPath:'tt_content.{content.data.CType}', data:'{content.data}', table:'tt_content')}</f:for>
+        </div>
+    </f:section>
+</html>
