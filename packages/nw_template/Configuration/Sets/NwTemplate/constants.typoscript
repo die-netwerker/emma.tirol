@@ -1,0 +1,2 @@
+@import 'EXT:nw_template/Configuration/TypoScript/Constants/*.typoscript'
+@import 'EXT:cs_seo/Configuration/TypoScript/constants.typoscript'

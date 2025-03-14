@@ -1,0 +1,17 @@
+
+### all content blocks
+lib {
+  contentBlock {
+    layoutRootPaths {
+      100 = EXT:nw_template/Resources/Private/ContentBlocks/Layouts/
+    }
+    partialRootPaths {
+      100 = EXT:nw_template/Resources/Private/ContentBlocks/Partials/
+    }
+    settings {
+      link_title = {$link_title}
+      phone = {$phone}
+    }
+  }
+}
+

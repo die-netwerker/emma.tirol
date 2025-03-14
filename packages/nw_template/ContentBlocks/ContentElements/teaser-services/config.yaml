@@ -1,0 +1,37 @@
+name: netwerk/teaser-services
+typeName: netwerk_teaserservices
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: items
+    type: Collection
+    label: Tätigkeitsbereiche 
+    labelField: title
+    fields:
+      - identifier: image
+        type: File
+        useExistingField: false
+        maxitems: 1
+        allowed: common-image-types
+        cropVariants:
+          desktop:
+            title: Desktop
+            allowedAspectRatios:
+              desktop:
+                title: 1:1
+                value: 1 / 1
+          mobile:
+            title: mobile Version
+            allowedAspectRatios:
+              mobile:
+                title: 1:1
+                value: 1 / 1
+      - identifier: title
+        type: Text
+      - identifier: text
+        type: Textarea

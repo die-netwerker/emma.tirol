@@ -1,0 +1,25 @@
+name: netwerk/teaser-overview
+typeName: netwerk_teaseroverview
+group: default
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: header
+    type: Textarea
+  - identifier: teaser
+    type: Collection
+    labelField: title
+    fields:
+      - identifier: icon
+        type: File
+        maxitems: 1
+      - identifier: title
+        type: Text
+      - identifier: text
+        type: Textarea
+      - identifier: url
+        type: Link

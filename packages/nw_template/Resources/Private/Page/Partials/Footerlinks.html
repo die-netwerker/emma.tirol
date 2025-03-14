@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="footerlinks">
+		<f:if condition="{footerlinks}">
+			<ul>
+				<f:for each="{footerlinks}" as="footer">
+					<li>
+						<a href="{footer.link}" title="{site.configuration.websiteTitle} - {footer.title}" target="{footer.target}">{footer.title}</a>
+					</li>
+					<li> | </li>
+				</f:for>
+			</ul>
+		</f:if>
+	</div>
+</html>

@@ -1,0 +1,89 @@
+// fonts
+$font_1: "Marcellus", serif;
+$font_2: "Jost", sans-serif;
+
+// colors
+$color_1: #EFEDEB;
+$color_2: #664247;
+$color_3: #928D86;
+$color_4: #343434;
+$color_5: #353535;
+$color_6: #4C5F6B;
+
+// fontsizes
+$fontsize_12: 12px;
+$fontsize_18: clamp(16px, 14.8px + 0.2vw, 18px);
+$fontsize_22: clamp(18px, 15.6px + 0.4vw, 22px);
+$fontsize_25: clamp(20px, 17px + 0.5vw, 25px);
+$fontsize_30: clamp(22px, 17.2px + 0.8vw, 30px);
+$fontsize_35: clamp(24px, 17.4px + 1.1vw, 35px);
+$fontsize_40: clamp(28px, 20.8px + 1.2vw, 40px);
+$fontsize_50: clamp(32px, 21.2px + 1.8vw, 50px);
+$fontsize_72: clamp(36px, 14.4px + 3.6vw, 72px);
+$fontsize_80: clamp(40px, 16px + 4vw, 80px);
+
+// margins
+$margin_26: clamp(12px, 3.6px + 1.4vw, 26px);
+$margin_40: clamp(20px, 8px + 2vw, 40px);
+$margin_60: clamp(30px, 12px + 3vw, 60px);;
+$margin_80: clamp(40px, 16px + 4vw, 80px);
+$margin_100: clamp(50px, 20px + 5vw, 100px);
+$margin_120: clamp(60px, 24px + 6vw, 120px);
+$margin_140: clamp(70px, 28px + 7vw, 140px);
+
+// frames
+%frame_40 {
+    width: 41%;
+    max-width: 780px;
+}
+%frame_1275 {
+    width: 90%;
+    max-width: 1275px;
+}
+%frame_80 {
+    width: 80%;
+    max-width: 1400px;
+}
+%frame_85 {
+    width: 85%;
+    max-width: 1550px;
+}
+
+%header {
+    h1, h2, h3 {
+        line-height: 1.2;
+        font-weight: 300;
+        font-family: $font_1;
+    }
+    &.center {
+        text-align: center;
+    }
+    .subheader{
+        font-family: $font_2;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+    }
+}
+// text
+%text {
+    font-size: $fontsize_25;
+    line-height: 1.5;
+    font-weight: 300;
+    @media (max-width: 380px) {
+        font-size: 18px;
+    }
+}
+%bodytext {
+    @extend %text;
+    &.text-center {
+        text-align: center;
+    }
+    & + p, & + ul {
+        margin-top: 1.5em;
+    }
+    a {
+        color: $color_1;
+    }
+}
+
+

@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')} {f:if(condition:'{data.hero}', then:' hero')}">
+        <f:asset.css identifier="text-image-round" href="EXT:nw_template/Resources/Public/Css/text-image-round.min.css" />
+        <div id="text-left">
+            <f:if condition="{data.header}">
+                <header>
+                    <h3>{data.header -> f:format.nl2br()}</h3>
+                </header>
+            </f:if>
+            <div id="text">
+                <f:if condition="{data.bodytext}">
+                    {data.bodytext -> f:format.html()}
+                </f:if>
+            </div>
+        </div>
+        <f:if condition="{data.image}">
+            <picture>
+                <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'270c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'540c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'360c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'720c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <source media="(max-width: 1200px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'540c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1080c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <source media="(max-width: 1400px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'400c', cropVariant:'universal', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'800c', cropVariant:'universal', fileExtension:'avif')} 2x">
+                <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'600c', cropVariant:'universal', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1200c', cropVariant:'universal', fileExtension:'avif')} 2x" width="600" height="600" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+            </picture>
+        </f:if>
+    </div>
+</html>

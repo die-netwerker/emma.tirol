@@ -1,0 +1,87 @@
+@use 'base';
+
+.frame-type-netwerk_textimageround{
+    width: 100%;
+    background-color: base.$color_1;
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 10%;
+    align-items:flex-end;
+    padding: 5% 8% 8% 12%;
+    position:relative;
+    &::before{
+        content: '';
+        width: 45%;
+        height: 2px;
+        background-color: base.$color_2;
+        display:block;
+        position:absolute;
+        left: 0;
+        top: 11%;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 11%; /* Kugel etwas höher als der Strich */
+        left: 45%; /* Am Ende des Strichs */
+        width: 25px;
+        height: 25px;
+        background-color: base.$color_2;
+        border-radius: 50%;
+        transform: translateY(-12.5px);
+    }
+    #text-left{
+        color: base.$color_2;
+        margin-top: 1em;
+        p + p {
+            margin-top: 1.5em;
+        }
+    }
+    header > h3{
+        font-size: base.$fontsize_50;
+        font-weight: 300;   
+        margin-bottom: 1em;
+    }
+    img{
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+    }
+    @media(max-width:1600px){
+        padding: 5%;
+        gap: 5%;
+    }
+    @media(max-width:1400px){
+        grid-template-columns: 2fr 1fr;
+        &::before{
+            width: 55%;
+        }
+        &::after{
+            left: 55%;
+        }
+    }
+    @media(max-width:1200px){
+        display:block;
+        padding-top: 14%;
+        picture{
+            width: 50%;
+            margin: 4rem auto 0 auto;
+            display:block;
+        }
+        &::before{
+            width: 75%;
+        }
+        &::after{
+            left: 75%;
+        }
+    }
+    @media(max-width: 430px){
+        &::before, &::after{
+            top: 5%;
+        }
+        picture{
+            width: 70%;
+            margin-top: 2rem;
+        }
+    }
+}

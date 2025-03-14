@@ -1,0 +1,28 @@
+{
+    "name": "netwerk/nw_template",
+    "type": "typo3-cms-extension",
+    "description": "Sitepackage",
+    "authors": [],
+    "require": {
+		"typo3/cms-core": "^13.4|dev-main",
+		"typo3/cms-fluid-styled-content": "^13.4|dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netwerk\\NwTemplate\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netwerk\\NwTemplate\\Tests\\": "Tests/"
+        }
+    },
+    "replace": {
+        "netwerk/nw-template": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "nw_template"
+        }
+    }
+}

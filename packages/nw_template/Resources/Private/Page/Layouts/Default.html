@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="top">
+        <f:link.page pageUid="1" class="logo-link"><f:render partial="Logo" arguments="{_all}" /></f:link.page>
+        <f:render partial="Navigation" arguments="{_all}" />
+        <div id="top-left">
+          <f:render partial="Languages" arguments="{_all}" />
+          <f:render partial="Cta" arguments="{_all}" />
+        </div>
+        
+    </div>
+    <f:render section="Main" />
+    <div id="footer">
+        <f:render partial="Logo" arguments="{_all}" />
+        <f:render partial="Address" arguments="{_all}" />
+        <f:render partial="Footerlinks" arguments="{_all}" />
+        <f:render partial="Contact" arguments="{_all}" />
+    </div>
+    <div id="contact-modal">
+        <div class="menu close-btn">&#10005;</div>
+        <f:render partial="Address" arguments="{_all}" />
+    </div>
+    <div id="mobile-modal">
+        <div class="menu close-btn">&#10005;</div>
+        <f:render partial="Navigation" arguments="{_all}" />
+    </div>
+    <f:render partial="Schemaorg" arguments="{_all}" />
+</html>

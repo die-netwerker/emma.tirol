@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')} {f:if(condition:'{data.hero}', then:' hero')}">
+        <f:asset.css identifier="facts" href="EXT:nw_template/Resources/Public/Css/facts.min.css" />
+            <ul class="facts">
+                <f:for each="{data.facts}" as="data">
+                    <li>
+                        <f:if condition="{data.title}">
+                            <p id="header">{data.title -> f:format.nl2br()}</p>
+                        </f:if>
+                        <div id="text">
+                            <f:if condition="{data.text}">
+                                {data.text -> f:format.html()}
+                            </f:if>
+                        </div>
+                    </li> 
+                </f:for>
+            </ul>
+    </div>
+</html>

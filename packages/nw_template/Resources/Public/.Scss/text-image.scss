@@ -1,0 +1,42 @@
+@use 'base';
+
+.frame-type-netwerk_textbild{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto auto;
+    .text-left{
+        background-color: base.$color_2;
+        color: #fff;
+        padding: 20% 25% 15% 20%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        header > h3{
+            font-size: base.$fontsize_50;
+            font-weight: 300;
+            margin-bottom: 1em;
+        }
+        .button{
+            margin-top: 4em;
+        }
+        #text{
+            p + p{
+                margin-top: 1.5em;
+            }
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        display:block;
+    }
+    @media(max-width: 1400px){
+        .text-left{
+            padding: 10%;
+        }
+    }
+    @media(max-width: 800px){
+        grid-template-columns: 1fr;
+    }
+}

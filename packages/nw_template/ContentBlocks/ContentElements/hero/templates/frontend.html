@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')} {f:if(condition:'{data.hero}', then:' hero')}">
+        <f:asset.css identifier="hero" href="EXT:nw_template/Resources/Public/Css/hero.min.css" />
+        <header>
+          <f:if condition="{data.subheader}">
+              <p class="subheader">{data.subheader -> f:format.nl2br()}</p>
+          </f:if>
+          <f:if condition="{data.header}">
+            <h1 class="header">{data.header -> f:format.nl2br()}</h1>
+          </f:if>    
+        </header>
+        <f:if condition="{data.image}">
+            <picture>
+                <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'430c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'860c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                <source media="(max-width: 1024px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1024c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'860c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                <source media="(max-width: 1400px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1400c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'2800c', cropVariant:'desktop', fileExtension:'avif')} 2x">
+                <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1920', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'3840', cropVariant:'desktop', fileExtension:'avif')} 2x" width="1920" height="960" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+            </picture>
+        </f:if>   
+        <div class="overlay"></div>
+    </div>
+</html>

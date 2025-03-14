@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="en" datatype="plaintext" original="messages" date="2018-09-08T12:46:21Z" product-name="page">
+		<header/>
+		<body>
+			<!-- basics -->
+			<trans-unit id="cdata">
+				<source><![CDATA[...]]></source>
+			</trans-unit>
+			<trans-unit id="request">
+				<source>Request</source>
+			</trans-unit>
+			<trans-unit id="book">
+				<source>Book</source>
+			</trans-unit>
+        </body>
+	</file>
+</xliff>

@@ -1,0 +1,4 @@
+name: netwerk/nw-template
+label: Netwerk Typo3 Template
+dependencies:
+  - typo3/fluid-styled-content

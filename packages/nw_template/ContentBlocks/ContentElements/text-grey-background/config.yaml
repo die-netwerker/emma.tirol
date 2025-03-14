@@ -1,0 +1,26 @@
+name: netwerk/text-grey-background
+typeName: netwerk_textgreybackground
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: header
+    useExistingField: true
+  - identifier: bodytext
+    type: Textarea
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: button
+    type: Palette
+    label: Button
+    fields:
+    - identifier: url
+      type: Link
+    - identifier: linktext
+      type: Text
+      

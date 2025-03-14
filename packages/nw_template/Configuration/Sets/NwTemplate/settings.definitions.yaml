@@ -1,0 +1,143 @@
+categories:
+  Site:
+    label: 'Seite'
+  Site.menu:
+    label: 'Menü'
+    parent: 'Site'
+  Site.info:
+    label: 'Infos'
+    parent: 'Site'
+  Site.socials:
+    label: 'Social Media'
+    parent: 'Site'
+
+settings:
+  site.mainMenu:
+    label: 'Hauptnavi'
+    category: Site.menu
+    description: 'Die IDs der Hauptmenüpunkte mit Besitrich getrennt (2,3,4)'
+    type: string
+    default: ''
+  site.subMenu:
+    label: 'Subnavi'
+    category: Site.menu
+    description: 'Die IDs der Submenüpunkte mit Besitrich getrennt (2,3,4)'
+    type: string
+    default: ''
+  site.footerMenu:
+    label: 'Footernavi'
+    category: Site.menu
+    description: 'Die IDs der Footermenüpunkte mit Besitrich getrennt (2,3,4)'
+    type: string
+    default: ''
+  site.bottomMenu:
+    label: 'Bottomnavi'
+    category: Site.menu
+    description: 'Die IDs der Bottommenüpunkte mit Besitrich getrennt (2,3,4)'
+    type: string
+    default: ''
+  site.themeColor:
+    label: 'Browserfarbe (mobil)'
+    category: Site.menu
+    type: color
+    default: '#fff'
+  site.name:
+    label: 'Name'
+    category: Site.info
+    type: string
+    default: 'netwerk Kreidl GmbH & C0 Kg'
+  site.owner:
+    label: 'Besitzer'
+    category: Site.info
+    type: string
+    default: 'Herwig Kreidl'
+  site.phone:
+    label: 'Telefonnummer'
+    category: Site.info
+    type: string
+    default: ''
+  site.phonelink:
+    label: 'Telefon Link'
+    category: Site.info
+    type: string
+    default: ''
+  site.mobile:
+    label: 'Mobiltelefonnummer'
+    category: Site.info
+    type: string
+    default: ''
+  site.mobileLink:
+    label: 'Mobil Link'
+    category: Site.info
+    type: string
+    default: ''
+  site.mail:
+    label: 'E-Mail'
+    category: Site.info
+    type: string
+    default: 'info@netwerk.at'
+  site.street:
+    label: 'Straße'
+    category: Site.info
+    type: string
+    default: 'Dorfstraße 16'
+  site.postcode:
+    label: 'Postleitzahl'
+    category: Site.info
+    type: string
+    default: '6275'
+  site.city:
+    label: 'Stadt'
+    category: Site.info
+    type: string
+    default: 'Stumm im Zillertal'
+  site.region:
+    label: 'Region'
+    category: Site.info
+    type: string
+    default: 'Tirol'
+  site.country:
+    label: 'Land'
+    category: Site.info
+    type: string
+    default: 'Österreich'
+  site.latitude:
+    label: 'Breitengrad'
+    category: Site.info
+    type: string
+    default: '47.293343'
+  site.longitude:
+    label: 'Längengrad'
+    category: Site.info
+    type: string
+    default: '11.883903'
+  site.map:
+    label: 'Google Maps Eintrag'
+    category: Site.info
+    type: string
+    default: ''
+  site.description:
+    label: 'Beschreibung'
+    category: Site.info
+    type: string
+    default: ''
+  site.pricerange:
+    label: 'Preisspanne'
+    category: Site.info
+    type: string
+    default: ''
+  site.payments:
+    label: 'Zahlungsmethoden'
+    category: Site.info
+    type: string
+    default: ''
+  site.openinghours:
+    label: 'Öffnungszeiten'
+    category: Site.info
+    type: string
+    default: ''
+  site.image:
+    label: 'Bild'
+    category: Site.info
+    type: string
+    default: ''
