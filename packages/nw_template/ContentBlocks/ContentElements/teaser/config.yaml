@@ -1,0 +1,44 @@
+name: netwerk/teaser
+typeName: netwerk_teaser
+group: default
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: subheader
+    type: Text
+  - identifier: header
+    type: Text
+  - identifier: header_layout
+    useExistingField: true
+  - identifier: teaser
+    type: Collection
+    labelField: title
+    fields:
+      - identifier: image
+        type: File
+        maxitems: 1
+        allowed: common-image-types
+        cropVariants:
+          desktop:
+            title: Desktop
+            allowedAspectRatios:
+              portrait:
+                title: 2:3
+                value: 2 / 3
+          mobile:
+            title: mobile Version
+            allowedAspectRatios:
+              mobile:
+                title: 4:5
+                value: 4 / 5
+      - identifier: subtitle
+        type: Text
+      - identifier: title
+        type: Text
+      - identifier: linktitle
+        type: Text
+      - identifier: url
+        type: Link

@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
+        <f:asset.css identifier="teaser" href="EXT:nw_template/Resources/Public/Css/teaser.min.css" />
+            <f:if condition="{data.header} || {data.subheader}">
+                <header>
+                    <f:if condition="{data.subheader}">
+                        <p class="subheader">{data.subheader}</p>
+                    </f:if>
+                    <f:if condition="{data.header}">
+                        <f:switch expression="{data.header_layout}">
+                            <f:case value="0"><h2>{data.header -> f:format.nl2br()}</h2></f:case>
+                            <f:case value="1"><h1>{data.header -> f:format.nl2br()}</h1></f:case>
+                            <f:case value="3"><h3>{data.header -> f:format.nl2br()}</h3></f:case>
+                        </f:switch>
+                    </f:if>
+                </header>
+            </f:if>
+            <ul class="teaser">
+                <f:for each="{data.teaser}" as="data">
+                    <li>
+                        <f:link.typolink parameter="{data.url}">
+                            <f:if condition="{data.image.0}">
+                                <picture>
+                                    <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'100c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'200c', cropVariant:'desktop', fileExtension:'avif')} 2x">
+                                    <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'120c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'240c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <source media="(max-width: 1200px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'140c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'280c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'435c', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'870c', cropVariant:'desktop', fileExtension:'avif')} 2x" width="435" alt="{data.image.0.alternative}" title="{data.image.0.title}" loading="lazy"/>
+                                </picture>
+                            </f:if>
+                            <div id="text-image">
+                                <f:if condition="{data.subtitle}">
+                                    <p id="teaser-subtitle">{data.subtitle -> f:format.nl2br()}</p>
+                                </f:if>
+                                <f:if condition="{data.title}">
+                                    <p id="teaser-title">{data.title -> f:format.nl2br()}</p>
+                                </f:if>
+                                <f:if condition="{data.linktitle}">
+                                    <p id="teaser-linktitle">{data.linktitle -> f:format.nl2br()} › </p>
+                                </f:if>
+                            </div>  
+                            <div id="teaser-overlay"></div>
+                        </f:link.typolink>
+                    </li> 
+                </f:for>
+            </ul>
+    </div>
+</html>

@@ -1,0 +1,43 @@
+@use 'base';
+
+.frame-type-netwerk_slider{
+    width: 100%;
+    overflow-x: hidden;
+    .splide__track{
+        overflow: unset;
+    }
+    .splide__arrows{
+        svg{
+            fill: #000;
+            height: 1em;
+            width:1em;
+        }
+    }
+    .splide__arrow{
+        height: 3em;
+        width: 3em;
+        opacity: 1;
+        background: #fff;
+    }
+    .splide__pagination{
+        display:flex;
+    }
+    .slider-wrap{
+        section{
+            width: 100%;
+        }
+        .splide__list{
+            width: 100%;
+        }
+        li.splide__slide{
+            height: 100%;
+            width: auto !important;
+            img{
+                height: 100%;
+                min-height: 600px;
+                width: auto;
+                object-fit:cover;
+            }
+        }
+    }
+}

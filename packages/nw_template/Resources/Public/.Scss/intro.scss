@@ -1,0 +1,17 @@
+@use 'base';
+
+.frame-type-netwerk_intro{
+    @extend %header;
+    @extend %frame_950;
+    text-align:center;
+    padding: 8.5% 0;
+    .subheader{
+        font-size: base.$fontsize_14;
+        color: base.$color_1;
+    }
+    .bodytext{
+        font-size: base.$fontsize_36;
+        margin-top: 20px;
+        line-height: 1.35em;
+    }
+}

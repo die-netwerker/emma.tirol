@@ -6,7 +6,6 @@
     left:0;
     z-index: 5;
     width: 100%;
-    background-color: base.$color_2;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -40,6 +39,7 @@
         a{
             border: 1px solid #fff;
             padding: 10px 24px;
+            line-height: 3em;
         }
     }
     @media(max-width: 1550px){
@@ -72,6 +72,20 @@
             svg{
                 fill: #fff;
             }
+        }
+    }
+}
+.scrolled{
+    #top{
+        background:#fff;
+        .logo-link svg{
+            fill: #B99D75;
+        }
+        li, a{
+            color: #000;
+        }
+        .cta a {
+            border: 1px solid #000;
         }
     }
 }

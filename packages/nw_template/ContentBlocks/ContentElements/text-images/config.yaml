@@ -1,0 +1,56 @@
+name: netwerk/text-images
+typeName: netwerk_textimages
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: subheader
+    type: Text
+    label: 'Unterüberschrift'
+  -
+    identifier: header
+    type: Text
+    label: 'Überschrift'
+  - identifier: header_layout
+    useExistingField: true
+  - identifier: elements
+    type: Collection
+    label: 'Icon-Text-Elemente'
+    labelField: title
+    fields:
+      - identifier: icon
+        type: File
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: title
+        type: Text
+      - identifier: bodytext
+        type: Textarea
+        useExistingField: true
+        enableRichtext: true
+        richtextConfiguration: default
+  -
+    identifier: image
+    type: File 
+    label: 'Bild'
+    useExistingField: false
+    maxItems: 2
+    allowed: common-image-types
+    cropVariants:
+      desktop:
+        title: Desktop
+        allowedAspectRatios:
+          desktop:
+            title: Hochformat
+            value: 0.67
+      mobile:
+        title: mobile Version
+        allowedAspectRatios:
+          mobile:
+            title: Hochformat
+            value: 0.67
