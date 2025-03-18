@@ -3,22 +3,19 @@ $font_1: "Marcellus", serif;
 $font_2: "Jost", sans-serif;
 
 // colors
-$color_1: #EFEDEB;
-$color_2: #664247;
-$color_3: #928D86;
-$color_4: #343434;
-$color_5: #353535;
-$color_6: #4C5F6B;
+$color_1: #B99D75;
 
 // fontsizes
 $fontsize_12: 12px;
+$fontsize_14: 14px;
+$fontsize_16: 16px;
 $fontsize_18: clamp(16px, 14.8px + 0.2vw, 18px);
 $fontsize_22: clamp(18px, 15.6px + 0.4vw, 22px);
 $fontsize_25: clamp(20px, 17px + 0.5vw, 25px);
 $fontsize_30: clamp(22px, 17.2px + 0.8vw, 30px);
-$fontsize_35: clamp(24px, 17.4px + 1.1vw, 35px);
+$fontsize_36: clamp(24px, 16.8px + 1.2vw, 36px);
 $fontsize_40: clamp(28px, 20.8px + 1.2vw, 40px);
-$fontsize_50: clamp(32px, 21.2px + 1.8vw, 50px);
+$fontsize_48: clamp(32px, 22.4px + 1.6vw, 48px);
 $fontsize_72: clamp(36px, 14.4px + 3.6vw, 72px);
 $fontsize_80: clamp(40px, 16px + 4vw, 80px);
 
@@ -36,19 +33,23 @@ $margin_140: clamp(70px, 28px + 7vw, 140px);
     width: 41%;
     max-width: 780px;
 }
-%frame_1275 {
-    width: 90%;
-    max-width: 1275px;
-}
 %frame_80 {
     width: 80%;
     max-width: 1400px;
 }
-%frame_85 {
+%frame_950 {
     width: 85%;
-    max-width: 1550px;
+    max-width: 950px;
+    margin: 0 auto;
 }
-
+%subheader{
+    font-family: $font_2;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform:uppercase;
+    font-size: $fontsize_14;
+    color: $color_1;
+}
 %header {
     h1, h2, h3 {
         line-height: 1.2;
@@ -59,11 +60,10 @@ $margin_140: clamp(70px, 28px + 7vw, 140px);
         text-align: center;
     }
     .subheader{
-        font-family: $font_2;
-        font-weight: 500;
-        letter-spacing: 0.1em;
+        @extend %subheader;
     }
 }
+
 // text
 %text {
     font-size: $fontsize_25;

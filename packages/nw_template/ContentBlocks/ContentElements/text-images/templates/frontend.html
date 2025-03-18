@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
+        <f:asset.css identifier="text-images" href="EXT:nw_template/Resources/Public/Css/text-images.min.css" />
+        <div class="text-left">
+            <f:if condition="{data.header} || {data.subheader}">
+                <header>
+                    <f:if condition="{data.subheader}">
+                        <p class="subheader">{data.subheader}</p>
+                    </f:if>
+                    <f:if condition="{data.header}">
+                        <f:switch expression="{data.header_layout}">
+                            <f:case value="0"><h2>{data.header -> f:format.nl2br()}</h2></f:case>
+                            <f:case value="1"><h1>{data.header -> f:format.nl2br()}</h1></f:case>
+                            <f:case value="3"><h3>{data.header -> f:format.nl2br()}</h3></f:case>
+                        </f:switch>
+                    </f:if>
+                </header>
+            </f:if>
+            <ul>
+                <f:for each="{data.elements}" as="element">
+                    <li>
+                        <f:if condition="{element.icon.0}">
+                            <f:image image="{element.icon.0}" treatIdAsReference="true" width="40" height="auto"/>
+                        </f:if>
+                        <f:if condition="{element.title}">
+                            <p id="title">{element.title -> f:format.nl2br()} </p>
+                        </f:if>
+                        <f:if condition="{element.bodytext}">
+                            <div id="text">{element.bodytext -> f:format.html()} </div>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="images">
+            <f:if condition="{data.image.0}">
+                <picture>
+                    <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'430c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'860c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                    <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'800c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'1600c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                    <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'315c', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'630c', cropVariant:'desktop', fileExtension:'avif')} 2x" width="315" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+                </picture>
+            </f:if>
+            <f:if condition="{data.image.1}">
+                <picture>
+                    <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'430c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'860c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                    <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'800c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'1600c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                    <img src="{f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'290c', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.1}', treatIdAsReference:'true', width:'580c', cropVariant:'desktop', fileExtension:'avif')} 2x" width="290" alt="{data.image.1.alternative}" title="{data.image.1.title}" />
+                </picture>
+            </f:if>
+        </div>
+    </div>
+</html>

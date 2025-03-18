@@ -11,7 +11,7 @@ html {
     scroll-padding-top: 140px;
 }
 body {
-    font: 400 base.$fontsize_25/1.2 base.$font_2;
+    font: 400 base.$fontsize_25/1.2 base.$font_1;
     color: #000;
     text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -90,7 +90,7 @@ body {
     }
 }
 #footer{
-    background-color: base.$color_5;
+    //background-color: base.$color_5;
     color: #fff;
     display:grid;
     grid-template-columns: 1fr 0.5fr 0.5fr;

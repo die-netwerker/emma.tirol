@@ -1,0 +1,18 @@
+name: netwerk/intro
+typeName: netwerk_intro
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: subheader
+    type: Text
+    label: Subheader
+  - identifier: bodytext
+    type: Textarea
+    useExistingField: true
+    enableRichtext: false

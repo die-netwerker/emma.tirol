@@ -4,33 +4,15 @@ if(document.getElementById("main").querySelectorAll(".frame-type-netwerk_hero").
     document.body.classList.add("nohero");
 }; 
 
+function addScrolled() {
+    let sp = window.scrollY;
+    if (sp >= 8) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+};
+window.addEventListener("scroll", addScrolled);
 
-//Modal für Kontakt
-document.querySelectorAll(".open-modal").forEach(button => {
-    button.addEventListener("click", openModal);
-});
-
-function openModal() {
-    document.body.classList.add("modal");
-}
-
-// Modal schließen
-document.querySelectorAll(".close-btn").forEach(closeElement => {
-    closeElement.addEventListener("click", closeModal);
-});
-
-function closeModal() {
-    document.body.classList.remove("modal");
-    document.body.classList.remove("mobile-modal");
-}
-
-//Modal für Responsive
-document.querySelectorAll(".open-mobile-modal").forEach(button => {
-    button.addEventListener("click", openMobileModal);
-});
-
-function openMobileModal() {
-    document.body.classList.add("mobile-modal");
-}
 
 
