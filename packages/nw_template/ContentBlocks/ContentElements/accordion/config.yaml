@@ -1,0 +1,24 @@
+name: netwerk/accordion
+typeName: netwerk_accordion
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: accordion
+    type: Collection
+    labelField: header
+    fields:
+    -
+      identifier: header
+      type: Text
+      label: Überschrift/Frage
+    - identifier: bodytext
+      type: Textarea
+      useExistingField: true
+      enableRichtext: true
+      richtextConfiguration: default

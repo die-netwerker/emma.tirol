@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" slider-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
+        <f:asset.css identifier="accordion" href="EXT:nw_template/Resources/Public/Css/accordion.min.css" />
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const accordionElements = document.querySelectorAll(".single-element");
+
+            accordionElements.forEach(element => {
+                element.addEventListener("click", () => {
+                    element.classList.toggle("is-open");
+                });
+            });
+        });
+        </script>
+        <div class="accordion-wrapper">
+            <div class="accordion odd">
+                <f:for each="{data.accordion}" as="data" iteration="iterator">
+                    <f:if condition="{iterator.index} % 2 != 0">
+                        <li class="single-element">
+                            <header>
+                                <f:if condition="{data.header}">
+                                    <h3>{data.header -> f:format.nl2br()}</h3>
+                                </f:if>
+                                <div class="showText"> </div>
+                            </header>
+                            <div id="text">
+                                <f:if condition="{data.bodytext}">
+                                    {data.bodytext -> f:format.html()}
+                                </f:if>
+                            </div>
+                        </li>
+                    </f:if>
+                </f:for>
+            </div>
+            <div class="accordion even">
+                <f:for each="{data.accordion}" as="data" iteration="iterator">
+                    <f:if condition="{iterator.index} % 2 == 0">
+                        <li class="single-element">
+                            <header>
+                                <f:if condition="{data.header}">
+                                    <h3>{data.header -> f:format.nl2br()}</h3>
+                                </f:if>
+                                <div class="showText"> </div>
+                            </header>
+                            <div id="text">
+                                <f:if condition="{data.bodytext}">
+                                    {data.bodytext -> f:format.html()}
+                                </f:if>
+                            </div>
+                        </li>
+                    </f:if>
+                </f:for>
+            </div>
+        </div>  
+    </div>
+</html> 
