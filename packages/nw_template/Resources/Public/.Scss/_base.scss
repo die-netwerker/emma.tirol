@@ -12,7 +12,7 @@ $fontsize_16: 16px;
 $fontsize_18: clamp(16px, 14.8px + 0.2vw, 18px);
 $fontsize_22: clamp(18px, 15.6px + 0.4vw, 22px);
 $fontsize_25: clamp(20px, 17px + 0.5vw, 25px);
-$fontsize_30: clamp(22px, 17.2px + 0.8vw, 30px);
+$fontsize_32: clamp(21px, 14.4px + 1.1vw, 32px);
 $fontsize_36: clamp(24px, 16.8px + 1.2vw, 36px);
 $fontsize_40: clamp(28px, 20.8px + 1.2vw, 40px);
 $fontsize_48: clamp(32px, 22.4px + 1.6vw, 48px);
@@ -35,7 +35,7 @@ $margin_140: clamp(70px, 28px + 7vw, 140px);
 }
 %frame_80 {
     width: 80%;
-    max-width: 1400px;
+    max-width: 1350px;
 }
 %frame_950 {
     width: 85%;
