@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-03-19T13:44:07+00:00" product-name="netwerk/roomteaser">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Roomteaser</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Teaser-Element für die Übersicht</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

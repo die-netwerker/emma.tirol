@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
+        <f:asset.css identifier="roomteaser" href="EXT:nw_template/Resources/Public/Css/roomteaser.min.css" />
+        <f:asset.css identifier="slider" href="EXT:nw_template/Resources/Public/Css/slider.min.css" />
+        <f:asset.css identifier="splide" href="EXT:nw_template/Resources/Public/Css/splide.min.css" />
+        <f:asset.script identifier="splide" src="EXT:nw_template/Resources/Public/JavaScript/splide.min.js" />
+        <script>
+            document.addEventListener( 'DOMContentLoaded', function() {
+                document.querySelectorAll('.splide-roomslider').forEach(carousel => {
+                    const splide = new Splide( carousel, {
+                    autoplay: false, 
+                    updateOnMove: true,
+                    type: "loop",
+                    perPage: 1,
+                    focus:'center',
+                    speed: 2000,
+                    interval: 3000,
+                    pagination: true,
+                    arrows:true,
+                    });
+                splide.mount();
+                });
+            } );
+        </script>
+            <ul class="items">
+                <f:for each="{data.items}" as="data">
+                    <li>
+                        <f:link.typolink parameter="{data.url}">
+                            <f:if condition="{data.image}">
+                                <f:if condition="{data.image -> f:count()} > 1">
+                                    <f:then>
+                                        <div class="slider-wrap">
+                                            <section class="splide splide-roomslider" id="splide-slider" role="group">
+                                                <div class="splide__track">
+                                                    <ul class="splide__list">
+                                                        <f:for each="{data.image}" as="file">
+                                                            <li class="splide__slide">
+                                                                <picture>
+                                                                    <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', width:'350c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', width:'7000c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                                                                    <img src="{f:uri.image(image:'{file}', treatIdAsReference:'true', width:'390', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', width:'780', cropVariant:'desktop', fileExtension:'avif')} 2x" width="390" height="800" alt="{file.alternative}" title="{file.title}" />
+                                                                </picture>                                            
+                                                            </li>
+                                                        </f:for>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <picture>
+                                            <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'350c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'7000c', cropVariant:'mobile', fileExtension:'avif')} 2x">
+                                            <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'390', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'780', cropVariant:'desktop', fileExtension:'avif')} 2x" width="390" height="800" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+                                        </picture>
+                                    </f:else> 
+                                </f:if>
+                            </f:if>
+                            <div id="text-bottom">
+                                <f:if condition="{data.title}">
+                                    <p id="teaser-header">{data.title -> f:format.nl2br()}</p>
+                                </f:if> 
+                                <f:if condition="{data.subtitle}">
+                                    <p id="teaser-subheader">{data.subtitle -> f:format.nl2br()}</p>
+                                </f:if> 
+                                <div id="text">
+                                    <f:if condition="{data.text}">
+                                        {data.text -> f:format.html()}
+                                    </f:if>
+                                </div>
+                                <f:if condition="{data.url}">
+                                    <span id="linktext">{data.linktext} › </span>
+                                </f:if>
+                            </div>
+                        </f:link.typolink>
+                    </li> 
+                </f:for>
+            </ul>
+    </div>
+</html>
