@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-02-18T11:06:22+00:00" product-name="netwerk/facts">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-03-19T13:08:51+00:00" product-name="netwerk/accordion">
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Faktenelement</source>
+				<source>Akkordeon</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>z.B. +25 Jahre Erfahrung ...</source>
+				<source>Akkordeon-Element 2-spaltig</source>
 			</trans-unit>
 		</body>
 	</file>
