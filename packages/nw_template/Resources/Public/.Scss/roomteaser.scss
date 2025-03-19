@@ -1,0 +1,66 @@
+@use 'base';
+
+.frame-type-netwerk_roomteaser{
+    @extend %frame_80;
+    ul.items{
+        list-style: none;
+        display:flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        li{
+            width: calc(50% - 25px);
+            align-items:center;
+            padding-bottom: 15px;
+            picture{
+                position:relative;
+                display:flex;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+            #text-bottom{
+                padding-top: 1.2em;
+                #teaser-header{
+                    font-size: base.$fontsize_32;
+                    margin-bottom: 15px;
+                }
+                #teaser-subheader{
+                    @extend %subheader;
+                    font-size: base.$fontsize_14;
+                }
+                #text{
+                    margin: 15px 0;
+                    font-family: base.$font_2;
+                    line-height: 1.5em;
+                    font-size: base.$fontsize_16;
+                }
+                #linktext{
+                    font-size: base.$fontsize_14;
+                    border-bottom: 1px solid base.$color_1;
+                    padding: 5px 0;
+                }
+                #text, #linktext{
+                    color: base.$color_2;
+                }
+            }
+        }
+    }
+    @media(max-width: 1400px){
+        
+    }
+    @media(max-width: 1000px){
+       
+    }
+    @media(max-width: 700px){
+        
+    }
+    @media(max-width: 500px){
+       
+    }
+}
