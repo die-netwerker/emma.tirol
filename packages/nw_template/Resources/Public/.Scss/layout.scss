@@ -81,7 +81,7 @@ body {
     width: fit-content;
     margin-top: 2.5em;
     a{
-        font-size: base.$fontsize_30;
+        font-size: base.$fontsize_32;
         color: #fff;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -91,19 +91,25 @@ body {
 }
 #footer{
     //background-color: base.$color_5;
+    background-color: #000;
     color: #fff;
     display:grid;
     grid-template-columns: 1fr 0.5fr 0.5fr;
     grid-template-areas:
     'Logo Address Contact'
-    '. Footerlinks .';
-    padding: 10%;
+    'Footerlinks Footerlinks Footerlinks';
+    padding: 4% 10%;
     column-gap: 5rem;
     p + p{
         margin-top: 1.5rem;
     }
     .logo{
         grid-area: Logo;
+        svg{
+            width: 250px;
+            height: auto;
+            fill: #fff;
+        }
         a{
             color:#fff;
             text-decoration: none;

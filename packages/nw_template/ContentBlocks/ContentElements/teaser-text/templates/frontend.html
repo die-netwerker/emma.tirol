@@ -23,8 +23,11 @@
                                 <picture>
                                     <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'350c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'7000c', cropVariant:'mobile', fileExtension:'avif')} 2x">
                                     <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'390', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'780', cropVariant:'desktop', fileExtension:'avif')} 2x" width="390" height="800" alt="{data.image.0.alternative}" title="{data.image.0.title}" />
+                                    <div id="offset-border"></div>
                                 </picture>
+                                
                             </f:if>
+                            
                             <div id="text-bottom">
                                 <f:if condition="{data.title}">
                                     <p id="teaser-header">{data.title -> f:format.nl2br()}</p>
