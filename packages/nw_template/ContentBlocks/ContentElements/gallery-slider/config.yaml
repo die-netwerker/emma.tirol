@@ -1,0 +1,28 @@
+name: netwerk/gallery-slider
+typeName: netwerk_galleryslider
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: image
+    type: File 
+    label: 'Bild'
+    useExistingField: true
+    allowed: common-image-types
+    cropVariants:
+      desktop:
+        title: Desktop
+        allowedAspectRatios:
+          desktop:
+            title: 1:1
+            value: 1 / 1
+      mobile:
+        title: mobile Version
+        allowedAspectRatios:
+          mobile:
+            title: 1:1
+            value: 1 / 1

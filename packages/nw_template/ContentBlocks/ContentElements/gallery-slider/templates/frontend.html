@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" slider-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
+        <f:asset.css identifier="gallery-slider" href="EXT:nw_template/Resources/Public/Css/gallery-slider.min.css" />
+        <f:asset.css identifier="splide" href="EXT:nw_template/Resources/Public/Css/splide.min.css" />
+        <f:asset.script identifier="splide" src="EXT:nw_template/Resources/Public/JavaScript/splide.min.js" />
+        <script>
+            document.addEventListener( 'DOMContentLoaded', function() {
+                document.querySelectorAll('#gallery-slider').forEach(carousel => {
+                    const splide = new Splide( carousel, {
+                    autoplay: false, 
+                    type: "loop",
+                    perPage: 5,
+                    perMove: 1,
+                    pagination: true,
+                    arrows:true,
+                    });
+                splide.mount();
+                });
+            } );
+        </script>
+        <div class="slider-wrap">
+            <section class="splide splide-slider" id="gallery-slider" role="group">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <f:for each="{data.image}" as="file">
+                            <li class="splide__slide">
+                                <picture>
+                                    <source media="(max-height: 430px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'300c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'600c', cropVariant:'mobile', fileExtension:'avif')} 2x" >
+                                    <source media="(max-height: 600px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'300c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'600c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <source media="(max-height: 1000px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'300c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'600c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <source media="(max-height: 1400px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'300c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'600c', cropVariant:'desktop', fileExtension:'avif')} 2x">
+                                    <img src="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'385c', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'770c', cropVariant:'desktop', fileExtension:'avif')} 2x" height="385" alt="{file.alternative}" title="{file.title}" loading="lazy"/>
+                                </picture>                                             
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+            </section>
+        </div>    
+    </div>
+</html>
