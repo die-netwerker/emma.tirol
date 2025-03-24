@@ -6,6 +6,7 @@
           <f:render partial="Languages" arguments="{_all}" />
           <f:render partial="Cta" arguments="{_all}" />
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu"><line x1="0" y1="50%" x2="100%" y2="50%" class="menu-bar menu-bar-top"></line><line x1="0" y1="50%" x2="100%" y2="50%" class="menu-bar menu-bar-middle"></line><line x1="0" y1="50%" x2="100%" y2="50%" class="menu-bar menu-bar-bottom"></line></svg>
         
     </div>
     <f:render section="Main" />
@@ -16,13 +17,15 @@
         <f:render partial="Footerlinks" arguments="{_all}" />
         
     </div>
-    <div id="contact-modal">
+    <div id="modal">
+        <f:link.page pageUid="1" class="logo-link"><f:render partial="Logo" arguments="{_all}" /></f:link.page>
         <div class="menu close-btn">&#10005;</div>
-        <f:render partial="Address" arguments="{_all}" />
-    </div>
-    <div id="mobile-modal">
-        <div class="menu close-btn">&#10005;</div>
-        <f:render partial="Navigation" arguments="{_all}" />
+        <div id="inner-modal">
+            <f:render partial="Languages" arguments="{_all}" />
+            <f:render partial="Navigation" arguments="{_all}" />
+            <f:render partial="Address" arguments="{_all}" />
+            <f:render partial="Socials" arguments="{_all}" />
+        </div>  
     </div>
     <f:render partial="Schemaorg" arguments="{_all}" />
 </html>

@@ -1,11 +1,9 @@
 
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
     <div class="address">
-        <h3>Kontakt</h3>
-        <p>
-            Villa Emma <br>
-            {site.configuration.settings.site.postcode} {site.configuration.settings.site.city}, {site.configuration.settings.site.street}
-        </p>
+        
+            <p id="company">Villa Emma </p>
+            <p>{site.configuration.settings.site.street}, <br> {site.configuration.settings.site.postcode} {site.configuration.settings.site.city}, <br> {site.configuration.settings.site.country}</p>
         <p>
             T - {site.configuration.settings.site.mobile} <br>
             E - {site.configuration.settings.site.mail} 

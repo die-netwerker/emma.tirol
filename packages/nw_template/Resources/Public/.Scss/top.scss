@@ -42,6 +42,32 @@
             line-height: 3em;
         }
     }
+
+
+    .menu {
+        right: 60px;
+        top: 75px;
+        display:none;
+        cursor: pointer;
+        height: 30px;
+        width: 40px;
+        .menu-bar {
+            transform-origin: center;
+            stroke: #fff;
+            stroke-width: 2px;
+            transition: all 0.6s ease;
+        }
+        .menu-bar-top {
+            transform: translateY(-10px)
+        }
+        .menu-bar-middle {
+            opacity: 1; // Sichtbarkeit des mittleren Balkens
+            transition: opacity 0.3s ease; 
+        }
+        .menu-bar-bottom {
+            transform: translateY(10px)
+        }
+    }
     @media(max-width: 1550px){
         .logo-link svg{
             height: 45px;
@@ -57,6 +83,9 @@
         }
         .navigation{
             display:none;
+        }
+        .menu{
+            display:block;
         }
     }
     @media(max-width:650px){
@@ -75,7 +104,7 @@
         }
     }
 }
-.scrolled{
+.scrolled, .nohero{
     #top{
         background:#fff;
         .logo-link svg{
@@ -87,5 +116,10 @@
         .cta a {
             border: 1px solid #000;
         }
+    }
+}
+.nohero, .scrolled{
+    #top .menu .menu-bar{
+        stroke: #000;
     }
 }

@@ -1,86 +1,93 @@
 @use 'base';
-#contact-modal {
-    position: fixed;
-    opacity: 0;
-    visibility: hidden;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    padding-top: 350px;
-    padding-left: 250px;
-    z-index: 15;
-    overflow:auto;
-    border: 1px solid base.$color_3;
-    background-color: base.$color_2;
-    &, a, span {
-        color: #fff;
-        text-decoration: none;
-    }
-    
-    p + p{margin-top: 1.5em;}
-    .logo{
-        margin-bottom: 135px;
-    }
-    svg.contact-logo{
-        width: 390px;
-        height: auto;
-        margin-bottom: 9rem;
-    }
-    svg.contact-icon{
-        position:absolute;
-        bottom: 70px;
-        right: 70px;
-    }
-}
-.modal {
-    #contact-modal {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-    
-    }
-}
 
-#mobile-modal{
+
+#modal{
     display:none;
-    width: 100%;
-    height: 100vh;
-    background-color: base.$color_2;
+    width: 45%;
+    height: 100%;
+    background-color: base.$color_3;
     color: #fff;
     position:fixed;
     top:0;
     left:0;
     z-index: 11;
-    .navigation{
+    overflow: auto;
+    #inner-modal{
         display:flex;
         flex-direction:column;
-        justify-content:center;
-        align-items:center;
+        justify-content:flex-start;
+        align-items:flex-start;
         height: 100vh;
-        padding: 5%;
-        list-style: none;
-        gap: 1.5em;
+        padding: 50px 50px 80px 50px;
+        gap: 0.5em;
         a, li{
             text-decoration: none; 
             color:#fff;
             font-size: base.$fontsize_32;
         }
+        ul{
+            list-style: none;
+        }
+        .navigation, .address{
+            margin-bottom: 20px;
+            li, p{
+                line-height: 1.5em;
+            }
+        }
+        .navigation{
+            a.active{
+                color: base.$color_1;
+            }
+        }
+        .languages{
+            margin-bottom: 20px;
+            display:flex;
+            gap: 0.5em;
+            a{
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: base.$font_2;
+                font-size: base.$fontsize_16;
+            }
+            
+        }
+        .address{
+            p{
+                font-size: base.$fontsize_16;
+                font-family: base.$font_2;
+            }
+            p#company{
+                font-size: base.$fontsize_22;
+                font-family: base.$font_1;
+            }
+        }
+        .socials{
+            display:flex;
+            gap: 10px;
+            svg{
+                width: 30px;
+                height:auto;
+            }
+        }
     }
-    svg.contact-icon{
-        position:absolute;
-        bottom: 40px;
-        right: 40px;
-        width: 60px;
+    .logo-link svg{
+        fill: base.$color_1;
+        width: 180px;
         height: auto;
     }
-}
-.mobile-modal{
-    #mobile-modal{
+    .logo-link{
         display:block;
+        width: 100%;
+        text-align:center;
+        margin-top: 45px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #FFFFFF45;
     }
+
+    
 }
+
 .close-btn {
     cursor: pointer;
     justify-self: flex-end;
@@ -90,32 +97,27 @@
     position: absolute;
     top: 45px;
     right: 45px;
-    font-size: base.$fontsize_35;
+    font-size: base.$fontsize_32;
 }
 
-@media(max-width: 1500px){
-    #contact-modal{
-        padding: 10%;
-        svg.contact-logo{
-            width: 300px;
-        }
-        svg.contact-icon{
-            width: 100px;
-            height: auto;
-        }
-    } 
-}
-@media(max-width: 1200px){
-    #contact-modal{
-        svg.contact-icon{
-            width: 60px;
-            bottom: 40px;
-            right: 40px;
-        }
+.modal{
+    #modal{
+        display:block;
     }
 }
-@media(max-width: 500px){
-    .modal #contact-modal{
-        padding-top: 8rem;
+
+@media(max-width: 850px){
+    #modal{
+        width: 50%;
+    }
+}
+@media(max-width: 650px){
+    #modal{
+        width: 60%;
+    }
+}
+@media(max-width: 430px){
+    #modal{
+        width: 100%;
     }
 }
