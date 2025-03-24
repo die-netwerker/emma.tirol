@@ -1,0 +1,26 @@
+name: netwerk/highlights
+typeName: netwerk_highlights
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: subheader
+    type: Text
+    label: Subheader
+  -
+    identifier: header
+    type: Textarea
+    enableRichtext: false
+  - identifier: bodytext
+    type: Textarea
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: highlights
+    type: Textarea
+    enableRichtext: false

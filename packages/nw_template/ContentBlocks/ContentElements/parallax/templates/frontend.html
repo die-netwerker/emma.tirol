@@ -3,14 +3,23 @@
         <f:asset.css identifier="parallax" href="EXT:nw_template/Resources/Public/Css/parallax.min.css" />
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                var images = document.querySelectorAll(".parallax");
-                if (images.length > 0) {
-                    images.forEach((img) => {
-                        new simpleParallax(img, { scale: 1.5, delay: 0.5 });
-                    });
-                }
+                let parallaxElement = document.querySelector(".frame-type-netwerk_parallax .parallax");
+        
+                window.addEventListener("scroll", function () {
+                    // Berechne die Scroll-Position und die Position des Elements
+                    let scrollPosition = window.scrollY;
+                    let elementTop = parallaxElement.getBoundingClientRect().top + scrollPosition;
+                    let elementHeight = parallaxElement.offsetHeight;
+                    
+                    // Berechne den Versatz für den Parallax-Effekt
+                    let offset = (scrollPosition - elementTop) * 0.2; // Parallax-Geschwindigkeit anpassen
+        
+                    // Wende den Versatz auf das Parallax-Element an
+                    parallaxElement.style.transform = `translateY(${offset}px)`;
+                });
             });
         </script>
+        
         <div id="parallax-content">
             <f:if condition="{data.subheader}">
                 <p class="subheader">{data.subheader -> f:format.nl2br()}</p>
