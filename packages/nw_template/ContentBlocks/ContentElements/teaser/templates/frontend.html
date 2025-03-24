@@ -21,9 +21,8 @@
                         <f:link.typolink parameter="{data.url}">
                             <f:if condition="{data.image.0}">
                                 <picture>
-                                    <source media="(max-width: 430px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'100c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'200c', cropVariant:'desktop', fileExtension:'avif')} 2x">
-                                    <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'120c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'240c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
-                                    <source media="(max-width: 1200px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'140c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'280c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <source media="(max-width: 800px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'350c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'700c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
+                                    <source media="(max-width: 1000px)" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'390c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'780c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
                                     <img src="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'435c', cropVariant:'desktop', fileExtension:'avif')}" srcset="{f:uri.image(image:'{data.image.0}', treatIdAsReference:'true', width:'870c', cropVariant:'desktop', fileExtension:'avif')} 2x" width="435" alt="{data.image.0.alternative}" title="{data.image.0.title}" loading="lazy"/>
                                 </picture>
                             </f:if>

@@ -94,19 +94,23 @@ body {
     background-color: #000;
     color: #fff;
     display:grid;
-    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     'Logo Address Contact'
     'Footerlinks Footerlinks Footerlinks';
-    padding: 4% 10%;
+    padding: 4% 12%;
     column-gap: 5rem;
     p + p{
         margin-top: 1.5rem;
     }
+    p, a {
+        font-size: base.$fontsize_16;
+        font-family: base.$font_2;
+    }
     .logo{
         grid-area: Logo;
         svg{
-            width: 250px;
+            width: 180px;
             height: auto;
             fill: #fff;
         }
@@ -117,31 +121,37 @@ body {
     }
     .address{
         grid-area: Address;
+        padding-bottom: 2.5rem;
+        justify-self: center;
         p + p{
             margin-top: 2em;
         }
     }
-    .contact{
-        grid-area: Contact;
-    }
+
     .footerlinks{
         grid-area:Footerlinks;
-        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid #FFFFFF1A;
         ul{
             list-style: none;
             display:flex;
-            gap: 5px;
+            gap: 1.5em;
             li{
-                font-size: base.$fontsize_18;
+                
                 a{
                     text-decoration: none;
                     color:#fff;
-                    
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: base.$fontsize_14;
                 }
             }
-            li:last-of-type{
-                display:none;
-            }
+        }
+    }
+    .socials{
+        justify-self: flex-end;
+        svg{
+            stroke: #fff;
         }
     }
     @media(max-width: 1500px){

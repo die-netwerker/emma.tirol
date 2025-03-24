@@ -5,3 +5,4 @@ site:
   mail: hello@emma.tirol
   street: 'Dorfstraße 16a'
   mainMenu: '2,5,6,8,7'
+  footerMenu: '7,9,10'

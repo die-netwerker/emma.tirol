@@ -1,7 +1,7 @@
 @use 'base';
 
 .frame-type-netwerk_teaser{
-    width: 100%;
+    width: 95%;
     margin-bottom: 50px;
     header {
         @extend %header;
@@ -21,6 +21,7 @@
         gap: 2.5rem;
         li{
             position:relative;
+            width: calc(25% - 2.5rem);
             a{
                 text-decoration: none;
             }
@@ -76,12 +77,16 @@
         }
     }
     @media(max-width: 1200px){
-        
+        ul.teaser {
+            gap: 1.5em;
+            li{
+                width: calc(50% - 2.5rem);
+            }
+        }
     }
-    @media(max-width: 950px){
-        
-    }
-    @media(max-width: 600px){
-        
+    @media(max-width: 500px){
+        ul.teaser li{
+            width: 100%;
+        }
     }
 }

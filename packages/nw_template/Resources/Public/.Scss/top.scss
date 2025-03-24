@@ -74,22 +74,27 @@
         }
     }
     @media(max-width: 1200px){
-        justify-content:flex-end;
         .logo-link{
             margin-right: auto;
         }
         svg.logo{
             margin-left: 3rem;   
         }
-        .navigation{
+        .navigation, .languages{
             display:none;
         }
         .menu{
             display:block;
         }
     }
-    @media(max-width:650px){
-        height: 80px;
+    @media(max-width:850px){
+        padding: 1em;
+    }
+    @media(max-width:550px){
+
+       .cta{
+            display: none;
+       }
     }
 
 }
