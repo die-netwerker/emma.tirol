@@ -1,0 +1,11 @@
+config:
+  repository: git@github.com:die-netwerker/emma.tirol.git
+hosts:
+  main:
+    hostname: 'p688748.webspaceconfig.de'
+    remote_user: 'p688748'
+    http_user: 'p688748'
+    port: 22
+    deploy_path: '~/html/typo3-main'
+    branch: main
+ 
