@@ -1,6 +1,6 @@
 {
 	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"type": "project",
 	"config": {
@@ -49,12 +49,19 @@
 		"typo3/cms-viewpage": "^13.4",
 		"typo3/cms-webhooks": "^13.4"
 	},
-	"repositories": [
-		{
+	"repositories": {
+		"nitsan": {
+			"type": "composer",
+			"url": "https://composer.t3planet.cloud",
+			"only": [
+				"nitsan/ns-t3ai>"
+			]
+		},
+		"0": {
 			"type": "path",
 			"url": "./packages/*"
 		}
-	],
+	},
 	"require-dev": {
 		"netwerk/dev": "^13.0"
 	}
