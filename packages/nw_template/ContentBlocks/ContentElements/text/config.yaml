@@ -19,6 +19,8 @@ fields:
     rows: 2
   - identifier: header_layout
     useExistingField: true
+  - identifier: header_position
+    useExistingField: true
   - identifier: bodytext
     type: Textarea
     useExistingField: true

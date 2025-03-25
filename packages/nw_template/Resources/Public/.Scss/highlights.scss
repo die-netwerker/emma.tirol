@@ -7,13 +7,13 @@
     display:flex;
     gap: 10%;
     padding: 110px 12%;
-    #text-left, #text-rechts{
+    #text-left, #text-right{
         width: 45%;
     }
     .subheader{
         @extend %subheader;
     }
-    .bodytext, #text-rechts p{
+    .bodytext, #text-right p{
         font-family: base.$font_2;
         font-size: base.$fontsize_18;
         line-height: 1.66em;
@@ -24,7 +24,7 @@
         font-weight: 300;
         text-transform: uppercase;
     }
-    #text-rechts{
+    #text-right{
         display:flex;
         flex-wrap: wrap;
         gap: 5%;
@@ -36,6 +36,30 @@
         p{
             width: 47.5%;
             line-height: 2.6em;
+        }
+    }
+    @media(max-width:1200px){
+        padding: 5%;
+    }
+    @media(max-width:950px){
+        display:block;
+        #text-left, #text-right{
+            width: 100%;
+        }
+        #text-left{
+            margin-bottom: 1.5em;
+        }
+        #text-right p{
+            line-height: 2em;
+        }
+    }
+    @media(max-width:600px){
+        #text-right{
+            display:block;
+            margin-bottom: 1em;
+            p{
+                width: 100%;
+            }
         }
     }
 }
