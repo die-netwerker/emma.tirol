@@ -19,6 +19,8 @@ page {
   ### config
   config {
 
+    contentObjectExceptionHandler = 0
+
     absRefPrefix = /
 
     cache_period = 15552000
