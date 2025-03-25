@@ -1,6 +1,11 @@
-base: 'https://emma.tirol.ddev.site/'
-dependencies:
-  - netwerk/nw-template
+base: 'https://emma.netwerk.guru/'
+baseVariants:
+  -
+    base: 'https://p688748.webspaceconfig.de/'
+    condition: 'getenv("HTTP_HOST") == "p688748.webspaceconfig.de"'
+  -
+    base: 'https://emma.tirol.ddev.site/'
+    condition: 'applicationContext == "Development"'
 disableStaticFileCache: false
 languages:
   -
