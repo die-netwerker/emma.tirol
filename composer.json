@@ -20,6 +20,8 @@
 		"lochmueller/staticfilecache": "^15.1",
 		"netwerk/live": "^13.0",
 		"netwerk/nw_template": "@dev",
+		"nitsan/ns-license": "^13.0",
+		"nitsan/ns-t3ai": "^2.0",
 		"t3/min": "^3.1",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",

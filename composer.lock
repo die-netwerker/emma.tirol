@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9275538143567681d8bfa875a66bff2d",
+    "content-hash": "4534c3c5e9fccec8b1e281103f51acf0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -693,16 +693,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b115554301161fa21467629f1e1391c1936de517"
+                "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b115554301161fa21467629f1e1391c1936de517",
-                "reference": "b115554301161fa21467629f1e1391c1936de517",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
+                "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
                 "shasum": ""
             },
             "require": {
@@ -748,7 +748,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.3"
+                "source": "https://github.com/egulias/EmailValidator/tree/4.0.4"
             },
             "funding": [
                 {
@@ -756,7 +756,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-27T00:36:43+00:00"
+            "time": "2025-03-06T22:45:56+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -2026,6 +2026,143 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "time": "2024-12-30T11:07:19+00:00"
+        },
+        {
+            "name": "nitsan/ns-license",
+            "version": "13.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nitsan-technologies/ns_license.git",
+                "reference": "3a065344232fe1964de3bedf76305de36240a5b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nitsan-technologies/ns_license/zipball/3a065344232fe1964de3bedf76305de36240a5b2",
+                "reference": "3a065344232fe1964de3bedf76305de36240a5b2",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^12 || ^13"
+            },
+            "replace": {
+                "typo3-ter/ns-license": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "ns_license",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NITSAN\\NsLicense\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Team T3Planet",
+                    "email": "sanjay@nitsan.in",
+                    "homepage": "http://www.nitsan.in/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage License(s) of your purchased from T3Planet such as TYPO3 Templates and TYPO3 Extensions.",
+            "homepage": "https://gitlab.com/sanjay_nitsan/ns_license",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "frontend",
+                "license",
+                "ns",
+                "responsive",
+                "template",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://gitlab.com/sanjay_nitsan/ns_license/issues",
+                "source": "https://github.com/nitsan-technologies/ns_license/tree/13.0.6"
+            },
+            "time": "2025-01-24T07:34:54+00:00"
+        },
+        {
+            "name": "nitsan/ns-t3ai",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nitsan-technologies/ns_t3ai.git",
+                "reference": "bfcbff09ee866a18b23f855c8775e56b695e025a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nitsan-technologies/ns_t3ai/zipball/bfcbff09ee866a18b23f855c8775e56b695e025a",
+                "reference": "bfcbff09ee866a18b23f855c8775e56b695e025a",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^10 || ^11 || ^12 || ^13"
+            },
+            "replace": {
+                "typo3-ter/ns-t3ai": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "ns_t3ai"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NITSAN\\NsT3Ai\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "T3: Nilesh Malankiya, T3: Parth Parmar, T3: Jay Bhalgamiya, T3: Rohan Parmar, QA: Vishal Solanki",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Meet T3AI- Experience AI-powered Models with ChatGPT, Gemini, Cloude & Azure AI for content generation, advanced SEO optimization, creative media production, easy language translation, and more—all within a few clicks, directly from your TYPO3 backend. Maximize your productivity by saving up to four times your time with T3AI.",
+            "homepage": "https://t3planet.com/t3ai-typo3-extension",
+            "keywords": [
+                "AIAssistant",
+                "AITranslations",
+                "AIchatbot",
+                "AIcontent",
+                "AIgeneration",
+                "AIimages",
+                "AImedia",
+                "AIpages",
+                "AIprompts",
+                "AIsidebar",
+                "AIsuggestion",
+                "ChatGpt",
+                "Gemini",
+                "KI",
+                "T3AI",
+                "TYPO3AI",
+                "TYPO3KI",
+                "ai",
+                "cloude",
+                "openai",
+                "seo",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://t3planet.com/support",
+                "source": "https://github.com/nitsan-technologies/ns_t3ai/tree/2.0.2"
+            },
+            "time": "2025-02-18T11:17:23+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
