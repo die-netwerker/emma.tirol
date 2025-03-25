@@ -6,6 +6,8 @@ baseVariants:
   -
     base: 'https://emma.tirol.ddev.site/'
     condition: 'applicationContext == "Development"'
+dependencies:
+  - netwerk/nw-template
 disableStaticFileCache: false
 languages:
   -
