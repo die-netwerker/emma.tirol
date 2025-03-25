@@ -14,3 +14,4 @@ nbproject
 !/config/system/settings.php
 !/config/system/additional.php
 db.sql*
+dump.sql
