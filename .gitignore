@@ -15,4 +15,3 @@ nbproject
 !/config/system/additional.php
 db.sql*
 dump.sql
-auth.json
