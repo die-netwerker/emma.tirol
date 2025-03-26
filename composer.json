@@ -48,13 +48,6 @@
 		"typo3/cms-webhooks": "^13.4"
 	},
 	"repositories": {
-		"nitsan": {
-			"type": "composer",
-			"url": "https://composer.t3planet.cloud",
-			"only": [
-				"nitsan/ns-t3ai>"
-			]
-		},
 		"0": {
 			"type": "path",
 			"url": "./packages/*"
