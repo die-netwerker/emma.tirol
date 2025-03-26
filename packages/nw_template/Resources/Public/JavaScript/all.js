@@ -31,7 +31,6 @@ window.addEventListener("scroll", addScrolled);
 document.addEventListener("DOMContentLoaded", function () {
     const selectors = [
         ".frame-type-netwerk_teaserblack ul.items > li",
-        ".frame-type-netwerk_hero header",
         ".frame-type-netwerk_textimages .images img",
         ".frame-type-netwerk_teasertext .items li",
     ]; // Hier kannst du beliebig viele Selektoren hinzufügen
