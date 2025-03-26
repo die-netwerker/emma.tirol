@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "686c3d2b5cd868535fd528a5250a265a",
+    "content-hash": "070e1113c8fd4125ec50dc8bc69a1379",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2026,6 +2026,69 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "time": "2024-12-30T11:07:19+00:00"
+        },
+        {
+            "name": "nitsan/ns-license",
+            "version": "13.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nitsan-technologies/ns_license.git",
+                "reference": "3a065344232fe1964de3bedf76305de36240a5b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nitsan-technologies/ns_license/zipball/3a065344232fe1964de3bedf76305de36240a5b2",
+                "reference": "3a065344232fe1964de3bedf76305de36240a5b2",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^12 || ^13"
+            },
+            "replace": {
+                "typo3-ter/ns-license": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "ns_license",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NITSAN\\NsLicense\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Team T3Planet",
+                    "email": "sanjay@nitsan.in",
+                    "homepage": "http://www.nitsan.in/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage License(s) of your purchased from T3Planet such as TYPO3 Templates and TYPO3 Extensions.",
+            "homepage": "https://gitlab.com/sanjay_nitsan/ns_license",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "frontend",
+                "license",
+                "ns",
+                "responsive",
+                "template",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://gitlab.com/sanjay_nitsan/ns_license/issues",
+                "source": "https://github.com/nitsan-technologies/ns_license/tree/13.0.6"
+            },
+            "time": "2025-01-24T07:34:54+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
