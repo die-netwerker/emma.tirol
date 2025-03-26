@@ -174,6 +174,7 @@ return [
         'sitename' => 'New TYPO3 site',
         'systemMaintainers' => [
             1,
+            2,
         ],
     ],
 ];
