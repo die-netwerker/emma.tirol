@@ -2,7 +2,7 @@
 return [
     'BE' => [
         'debug' => true,
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$dkNMZFRJeU1McTNuOC4xQw$oAYmb5SlA2+yxPeEtRzGFD1C/WzKuRTrIFzFy8/s6lg',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$dVA4YTZ1U0xFM2I0UU9SNg$pgdxkNeM5oyXXSrFcYpe5pNxuDx/xO+LPSXhODI/GiY',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -68,7 +68,6 @@ return [
             'disableInDevelopment' => '0',
             'enableGeneratorBrotli' => '0',
             'enableGeneratorGzip' => '1',
-            'enableGeneratorManifest' => '0',
             'enableGeneratorPhp' => '0',
             'enableGeneratorPlain' => '0',
             'hashUriInCache' => '0',
@@ -109,12 +108,17 @@ return [
         ],
     ],
     'GFX' => [
-        'imagefile_ext' => 'jpg,jpeg,png,webp,svg',
+        'avif_quality' => 70,
+        'imagefile_ext' => 'gif,jpg,jpeg,png,webp,avif',
+        'jpg_quality' => 70,
         'processor' => 'ImageMagick',
-        'processor_effects' => true,
+        'processor_allowUpscaling' => false,
+        'processor_effects' => false,
         'processor_enabled' => true,
-        'processor_path' => '/usr/local/bin/',
+        'processor_path' => '',
+        'processor_stripColorProfileCommand' => '+profile \\\'!iptc,*\\\'',
         'thumbnails' => true,
+        'webp_quality' => 70,
     ],
     'LOG' => [
         'TYPO3' => [
@@ -133,7 +137,7 @@ return [
     ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i',
+        'transport_sendmail_command' => '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
@@ -145,12 +149,6 @@ return [
             'cacheConfigurations' => [
                 'hash' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                ],
-                'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                    'options' => [
-                        'compression' => true,
-                    ],
                 ],
                 'pages' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
@@ -168,10 +166,10 @@ return [
         ],
         'devIPmask' => '*',
         'displayErrors' => 1,
-        'encryptionKey' => '980907153de9579490575d2155312fd0fd4ab5fe4e7a87b3346c88c5a6d574faced95cab64c732441809ff41be61bcb4',
+        'encryptionKey' => 'e48bf018e5f1484b9ad83ea16f1fbb1ee80d63a9a4b1a028c14cf8e675e7c1852f3a6c880e349907a72549e5b2a0a526',
         'exceptionalErrors' => 12290,
         'features' => [
-            'security.backend.enforceContentSecurityPolicy' => true,
+            'frontend.cache.autoTagging' => true,
         ],
         'sitename' => 'New TYPO3 site',
         'systemMaintainers' => [
