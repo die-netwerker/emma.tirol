@@ -33,7 +33,6 @@
             picture{
                 position:relative;
                 display:flex;
-                overflow:hidden;
             }
             img{
                 width: 100%;
@@ -76,11 +75,6 @@
         }
         li:nth-of-type(even){
             transform: translateY(50px);
-        }
-        > li:hover{
-            img{
-                transform: scale(1.07);
-            }
         }
     }
 
