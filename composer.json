@@ -21,6 +21,7 @@
 		"netwerk/live": "^13.0",
 		"netwerk/nw_template": "@dev",
 		"nitsan/ns-license": "^13.0",
+		"nitsan/ns-t3ai": "^4.5",
 		"t3/min": "^3.1",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",
@@ -49,6 +50,11 @@
 		"typo3/cms-webhooks": "^13.4"
 	},
 	"repositories": {
+		"nitsan": {
+			"type": "composer",
+			"url": "https://composer.t3planet.cloud",
+			"only": ["nitsan/ns-t3ai"]
+		},
 		"0": {
 			"type": "path",
 			"url": "./packages/*"

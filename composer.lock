@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "070e1113c8fd4125ec50dc8bc69a1379",
+    "content-hash": "4c7ec6f3ef558530be60d118a899b00b",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2091,6 +2091,84 @@
             "time": "2025-01-24T07:34:54+00:00"
         },
         {
+            "name": "nitsan/ns-t3ai",
+            "version": "4.5.5",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.nitsantech.com:t3planet/extensions/ns_t3ai.git",
+                "reference": "9c39323341e2347e02f66dbab22363c62ecaae06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.t3planet.cloud//dist/nitsan/ns-t3ai/nitsan-ns-t3ai-4.5.5-f9fa9c.zip",
+                "reference": "9c39323341e2347e02f66dbab22363c62ecaae06",
+                "shasum": "c6fbe42198b7ce9ff33fc6f707f9d114cf67c0bd"
+            },
+            "require": {
+                "nitsan/ns-license": ">=1.8.0",
+                "php": "^7.4 || ^8",
+                "spatie/backtrace": "^1.2",
+                "typo3/cms-backend": "^11 || ^12 || ^13",
+                "typo3/cms-core": "^11 || ^12 || ^13",
+                "typo3/cms-dashboard": "^11 || ^12 || ^13",
+                "typo3/cms-filelist": "^11 || ^12 || ^13",
+                "typo3/cms-fluid": "^11 || ^12 || ^13",
+                "typo3/cms-seo": "^11 || ^12 || ^13",
+                "typo3fluid/fluid": "^2.7 || ^4.0"
+            },
+            "replace": {
+                "typo3-ter/ns-t3ai": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "ns_t3ai"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NITSAN\\NsT3Ai\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Team T3Planet",
+                    "role": "Developer",
+                    "homepage": "https://t3planet.com",
+                    "email": "support@t3planet.com"
+                }
+            ],
+            "description": "First-ever AI (by T3AI) feature-rich content assistance in TYPO3 that automates content creation and optimization. The extension comes with numerous features like SEO optimization, Create AI-Page, Language Translation, Chat assistance, Ready-to-use helpful prompts, etc. Explore more https://t3planet.com/t3ai-typo3-extension",
+            "homepage": "https://t3planet.com",
+            "keywords": [
+                "AI",
+                "ChatGPT",
+                "Claude",
+                "DALL-E",
+                "DeepL",
+                "Gemini",
+                "Google Translate",
+                "MidJourney",
+                "Modelslab",
+                "OpenAI",
+                "Openverse",
+                "Pexels",
+                "Pixabay",
+                "Stability",
+                "T3AI",
+                "TYPO3",
+                "Unsplash"
+            ],
+            "support": {
+                "issues": "https://t3planet.com/support"
+            },
+            "time": "2025-03-21T07:20:40+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection-common",
             "version": "2.2.0",
             "source": {
@@ -2878,6 +2956,69 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "spatie/backtrace",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/backtrace.git",
+                "reference": "0f2477c520e3729de58e061b8192f161c99f770b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/0f2477c520e3729de58e061b8192f161c99f770b",
+                "reference": "0f2477c520e3729de58e061b8192f161c99f770b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "laravel/serializable-closure": "^1.3 || ^2.0",
+                "phpunit/phpunit": "^9.3 || ^11.4.3",
+                "spatie/phpunit-snapshot-assertions": "^4.2 || ^5.1.6",
+                "symfony/var-dumper": "^5.1 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Backtrace\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van de Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A better backtrace",
+            "homepage": "https://github.com/spatie/backtrace",
+            "keywords": [
+                "Backtrace",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/backtrace/tree/1.7.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/spatie",
+                    "type": "github"
+                },
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "other"
+                }
+            ],
+            "time": "2024-12-02T13:28:15+00:00"
         },
         {
             "name": "symfony/cache",
