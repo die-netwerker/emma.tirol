@@ -2,6 +2,7 @@
 return [
     'BE' => [
         'debug' => true,
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$dkNMZFRJeU1McTNuOC4xQw$oAYmb5SlA2+yxPeEtRzGFD1C/WzKuRTrIFzFy8/s6lg',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -11,7 +12,19 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8',
+                'dbname' => false,
                 'driver' => 'mysqli',
+                'host' => false,
+                'password' => false,
+                'port' => '3306',
+                'user' => false,
+            ],
+        ],
+    ],
+    'EXTCONF' => [
+        'lang' => [
+            'availableLanguages' => [
+                'de',
             ],
         ],
     ],
@@ -45,11 +58,6 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'ns_t3ai' => [
-            'apiKey' => '',
-            'model' => 'gpt-3.5-turbo',
-            'openAiPromptPrefixPageTitle' => 'Act as an SEO expert and write five an optimized title tag for a web page about [Content]',
-        ],
         'staticfilecache' => [
             'backendDisplayMode' => 'both',
             'boostMode' => '0',
@@ -60,6 +68,7 @@ return [
             'disableInDevelopment' => '0',
             'enableGeneratorBrotli' => '0',
             'enableGeneratorGzip' => '1',
+            'enableGeneratorManifest' => '0',
             'enableGeneratorPhp' => '0',
             'enableGeneratorPlain' => '0',
             'hashUriInCache' => '0',
@@ -100,10 +109,12 @@ return [
         ],
     ],
     'GFX' => [
-        'processor' => 'GraphicsMagick',
-        'processor_effects' => false,
+        'imagefile_ext' => 'jpg,jpeg,png,webp,svg',
+        'processor' => 'ImageMagick',
+        'processor_effects' => true,
         'processor_enabled' => true,
-        'processor_path' => '/usr/bin/',
+        'processor_path' => '/usr/local/bin/',
+        'thumbnails' => true,
     ],
     'LOG' => [
         'TYPO3' => [
@@ -122,7 +133,7 @@ return [
     ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025',
+        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
@@ -134,6 +145,12 @@ return [
             'cacheConfigurations' => [
                 'hash' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'imagesizes' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => true,
+                    ],
                 ],
                 'pages' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
@@ -151,11 +168,14 @@ return [
         ],
         'devIPmask' => '*',
         'displayErrors' => 1,
-        'encryptionKey' => '16f087a003d0d0c9aa90adc1f0246b749dee01dc77fb1543ede842a0b92436a793917419d18803bba57b899e6128fa58',
+        'encryptionKey' => '980907153de9579490575d2155312fd0fd4ab5fe4e7a87b3346c88c5a6d574faced95cab64c732441809ff41be61bcb4',
         'exceptionalErrors' => 12290,
         'features' => [
-            'frontend.cache.autoTagging' => true,
+            'security.backend.enforceContentSecurityPolicy' => true,
         ],
         'sitename' => 'New TYPO3 site',
+        'systemMaintainers' => [
+            1,
+        ],
     ],
 ];
