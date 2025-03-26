@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Intro</source>
+				<source>Slogan</source>
 			</trans-unit>
 			<trans-unit id="description">
 				<source></source>

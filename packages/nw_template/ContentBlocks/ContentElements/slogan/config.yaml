@@ -1,5 +1,5 @@
-name: netwerk/intro
-typeName: netwerk_intro
+name: netwerk/slogan
+typeName: netwerk_slogan
 group: default
 prefixFields: true
 prefixType: full
