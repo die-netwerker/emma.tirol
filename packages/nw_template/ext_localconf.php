@@ -4,7 +4,7 @@ defined('TYPO3') || die();
 /**
  * Typo3 LocalConfiguration changes
  */
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:nw_template/Configuration/CkEditor/Default.yaml';
+#$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:nw_template/Configuration/CkEditor/Default.yaml';
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['header'] = 'EXT:nw_template/Configuration/CkEditor/Header.yaml';
 #$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['classes']['Domain/Model/News']['nw_template'] = 'nw_template';
 #$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['header'] = 'EXT:nw_template/Configuration/CkEditor/Header.yaml';
