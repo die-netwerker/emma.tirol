@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-02-20T09:25:04+00:00" product-name="netwerk/text">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-03-26T12:39:23+00:00" product-name="netwerk/teaser-black">
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Text</source>
+				<source>Teaser: Bild-Text</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source></source>
+				<source>Text mit schwarzem Hintergrund</source>
 			</trans-unit>
 		</body>
 	</file>

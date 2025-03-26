@@ -6,6 +6,7 @@ $font_2: "Jost", sans-serif;
 $color_1: #B99D75;
 $color_2: #333632;
 $color_3: #53624e;
+$color_4: #0E0E0E; //Hintergrundfarbe Teaser-Text
 
 // fontsizes
 $fontsize_12: 12px;
@@ -39,9 +40,9 @@ $margin_140: clamp(70px, 28px + 7vw, 140px);
     width: 80%;
     max-width: 1350px;
 }
-%frame_950 {
+%frame_85 {
     width: 85%;
-    max-width: 950px;
+    max-width: 1550px;
     margin: 0 auto;
 }
 %subheader{
@@ -77,7 +78,7 @@ $margin_140: clamp(70px, 28px + 7vw, 140px);
 }
 %bodytext {
     @extend %text;
-    &.text-center {
+    .text-center {
         text-align: center;
     }
     & + p, & + ul {

@@ -1,0 +1,43 @@
+name: netwerk/teaser-black
+typeName: netwerk_teaserblack
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: teaseritems
+    type: Collection
+    label: Teaser-Items
+    labelField: title
+    fields:
+      - identifier: image
+        type: File
+        useExistingField: false
+        maxitems: 1
+        allowed: common-image-types
+        cropVariants:
+          desktop:
+            title: Desktop
+            allowedAspectRatios:
+              desktop:
+                title: Hochformat
+                value: 0.9
+          mobile:
+            title: mobile Version
+            allowedAspectRatios:
+              mobile:
+                title: Querformat
+                value: 2:1
+      - identifier: subtitle
+        type: Text
+      - identifier: title
+        type: Text
+      - identifier: text
+        type: Textarea
+      - identifier: url
+        type: Link
+      - identifier: linktext
+        type: Text

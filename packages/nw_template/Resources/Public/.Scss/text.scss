@@ -16,8 +16,12 @@
         .subheader{
             @extend %subheader;
         }
+        &.center{
+            text-align:center;
+        }
     }
     .bodytext{
+        @extend %bodytext;
         font-family: base.$font_2;
         font-size: base.$fontsize_18;
         p + p, p + ul{

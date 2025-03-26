@@ -1,0 +1,103 @@
+@use 'base';
+
+.frame-type-netwerk_teaserblack{
+    @extend %frame_85;
+    ul.items{
+        list-style: none;
+        > li{
+            margin-bottom: 110px;
+            display:grid;
+            grid-template-columns: 1.2fr 1fr;
+            grid-template-areas:
+            'image text';
+            align-items:center;
+            picture{
+                grid-area: image;
+                display:flex;
+                opacity: 0;
+                transform: translateX(0%);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+            #text{
+                grid-area: text;
+                opacity: 0;
+                transform: translateX(0%);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                padding: 5.5em 4em;
+                height: fit-content;
+                font-family: base.$font_2;
+                font-size: base.$fontsize_18;
+                line-height: 1.5em;
+                @extend %header;
+                background-color: base.$color_4;
+                color: #fff;
+                h3{
+                    font-size: base.$fontsize_40;
+                    margin: 0.4em 0 0.7em 0;
+                }
+                #button{
+                    border: 1px solid base.$color_1;
+                    padding: 15px 40px;
+                    width: fit-content;
+                    margin-top: 3em;
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &.visible {
+                opacity: 1;
+                transform: translateY(0);
+                #text{
+                    transform: translateX(-8%);
+                    opacity: 1;
+                }
+                picture{
+                    transform: translateX(8%);
+                    opacity: 1;
+                }
+            }
+        }
+        > li:nth-of-type(even){
+            grid-template-columns: 1fr 1.2fr;
+            grid-template-areas:
+            'text image';
+            &.visible{
+                picture{
+                    transform: translateX(-8%);
+                    
+                }
+                #text{
+                    transform: translateX(8%);
+                    
+                }
+            }
+            
+        }
+    }
+    @media(max-width: 1350px){
+        width: 95%;
+        ul.items > li{
+            #text{
+                padding: 3em 2em;
+            }
+        }
+    }
+    @media(max-width: 1000px){
+        ul.items {
+            li, li:nth-of-type(even){
+                display:block;
+                &.visible{
+                    picture, #text{
+                        transform: translateX(0);
+                    }
+                }
+            }
+        } 
+    }
+}

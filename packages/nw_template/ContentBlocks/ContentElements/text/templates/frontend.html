@@ -2,7 +2,7 @@
     <div id="c{data.uid}" class="frame-type-{data.CType}{f:if(condition:'{data.space_before_class}', then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}', then:' frame-space-after-{data.space_after_class}')}">
         <f:asset.css identifier="text" href="EXT:nw_template/Resources/Public/Css/text.min.css" />
             <f:if condition="{data.header}">
-                <header>
+                <header class="{f:if(condition:'{data.header_position}', then:' center')}">
                     <f:if condition="{data.subheader}">
                         <p class="subheader">{data.subheader}</p>
                     </f:if>
