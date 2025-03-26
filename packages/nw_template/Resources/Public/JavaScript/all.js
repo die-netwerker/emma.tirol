@@ -27,9 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 window.addEventListener("scroll", addScrolled);
 
-//Animation Teaser Black
+//Animationen
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".frame-type-netwerk_teaserblack ul.items > li");
+    const selectors = [
+        ".frame-type-netwerk_teaserblack ul.items > li",
+        ".frame-type-netwerk_hero header",
+        ".frame-type-netwerk_textimages .images img",
+        ".frame-type-netwerk_teasertext .items li",
+    ]; // Hier kannst du beliebig viele Selektoren hinzufügen
+
+    const items = document.querySelectorAll(selectors.join(", "));
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -40,10 +47,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.2 });
 
-    items.forEach(item => {
-        observer.observe(item);
-    });
+    items.forEach(item => observer.observe(item));
 });
 
+//mit Verzögerung pro Element
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".frame-type-netwerk_teaser ul.teaser > li");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 180); // 150ms Verzögerung pro Element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => observer.observe(item));
+});
 
 

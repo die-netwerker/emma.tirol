@@ -22,6 +22,9 @@
         li{
             position:relative;
             width: calc(25% - 2.5rem);
+            transform: translatey(15%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            opacity: 0;
             a{
                 text-decoration: none;
             }
@@ -66,10 +69,16 @@
                 pointer-events:none;
                 transition: opacity 0.4s ease-in-out;
             }
+            &.visible{
+                opacity: 1;
+                transform: none;
+            }
+            
         }
-        li:nth-of-type(even){
+        li:nth-of-type(even).visible{
             transform: translateY(50px);
         }
+        
         li:hover{
             #teaser-overlay{
                 opacity: 1;
