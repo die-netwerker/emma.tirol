@@ -127,5 +127,15 @@
 @media(max-width: 500px){
     #modal{
         width: 100%;
+        #inner-modal{
+            padding: 1em;
+            .languages{
+                margin-bottom: 0;
+            }
+        } 
+        .close-btn{
+            top: 20px;
+            right: 20px;
+        }
     }
 }
