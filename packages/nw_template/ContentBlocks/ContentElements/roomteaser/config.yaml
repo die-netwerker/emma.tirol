@@ -28,8 +28,8 @@ fields:
             title: mobile Version
             allowedAspectRatios:
               mobile:
-                title: 2:1
-                value: 2 / 1
+                title: 4:3
+                value: 4 / 3
       - identifier: title
         type: Text
       - identifier: subtitle

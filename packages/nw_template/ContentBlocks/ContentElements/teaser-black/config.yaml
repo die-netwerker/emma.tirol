@@ -30,7 +30,7 @@ fields:
             allowedAspectRatios:
               mobile:
                 title: Querformat
-                value: 2:1
+                value: 4 / 3
       - identifier: subtitle
         type: Text
       - identifier: title
