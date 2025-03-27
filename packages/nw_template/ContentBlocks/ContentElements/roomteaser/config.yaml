@@ -24,12 +24,6 @@ fields:
               desktop:
                 title: 3:2
                 value: 3 / 2
-          mobile:
-            title: mobile Version
-            allowedAspectRatios:
-              mobile:
-                title: 4:3
-                value: 4 / 3
       - identifier: title
         type: Text
       - identifier: subtitle
