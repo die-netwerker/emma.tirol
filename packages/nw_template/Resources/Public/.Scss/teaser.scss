@@ -100,7 +100,7 @@
             li{
                 width: 100%;
             }
-            li:nth-of-type(even){
+            li:nth-of-type(even).visible{
                 transform: none;
             }
         }
