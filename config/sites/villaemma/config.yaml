@@ -20,6 +20,21 @@ languages:
     flag: at
     hreflang: de-AT
     websiteTitle: ''
+  -
+    title: Englisch
+    enabled: true
+    locale: en_US
+    t3ai_speech: ''
+    hreflang: en-US
+    base: /en/
+    websiteTitle: ''
+    navigationTitle: Englisch
+    fallbackType: strict
+    fallbacks: ''
+    flag: en-us-gb
+    languageId: 1
 rootPageId: 1
+t3ai_company_description: ''
+t3ai_website_category: Retail
 txCsseoXdefault: 0
 websiteTitle: ''
