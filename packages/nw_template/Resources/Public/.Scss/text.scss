@@ -12,6 +12,7 @@
         }
         h1, h2, h3{
             font-weight: 300;
+            margin-top: 20px;
         }
         .subheader{
             @extend %subheader;

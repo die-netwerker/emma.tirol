@@ -20,7 +20,7 @@
                 <f:for each="{data.elements}" as="element">
                     <li>
                         <f:if condition="{element.icon.0}">
-                            <f:image image="{element.icon.0}" treatIdAsReference="true" width="40" height="auto"/>
+                            <f:image image="{element.icon.0}" treatIdAsReference="true" width="35" height="auto"/>
                         </f:if>
                         <f:if condition="{element.title}">
                             <p id="title">{element.title -> f:format.nl2br()} </p>

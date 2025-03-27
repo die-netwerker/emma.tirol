@@ -30,7 +30,7 @@
                         <f:for each="{data.image}" as="file">
                             <li class="splide__slide">
                                 <picture>
-                                    <source media="(max-height: 430px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'385c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'770c', cropVariant:'mobile', fileExtension:'avif')} 2x" >
+                                    <source media="(max-height: 430px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'385c', cropVariant:'mobile', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'770c', cropVariant:'mobile', fileExtension:'avif')} 2x" >
                                     <source media="(max-height: 600px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'572c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'1144c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
                                     <source media="(max-height: 1000px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'473c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'946c', cropVariant:'desktop', fileExtension:'avif')} 2x" >
                                     <source media="(max-height: 1400px)" srcset="{f:uri.image(image:'{file}', treatIdAsReference:'true', height:'662c', cropVariant:'desktop', fileExtension:'avif')}, {f:uri.image(image:'{file}', treatIdAsReference:'true', height:'1324c', cropVariant:'desktop', fileExtension:'avif')} 2x">

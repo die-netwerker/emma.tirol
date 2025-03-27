@@ -94,8 +94,15 @@
         }
     }
     @media(max-width: 500px){
-        ul.teaser li{
-            width: 100%;
+        ul.teaser {
+            width: 85%;
+            margin: 1em auto;
+            li{
+                width: 100%;
+            }
+            li:nth-of-type(even){
+                transform: none;
+            }
         }
     }
 }
