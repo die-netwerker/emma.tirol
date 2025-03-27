@@ -225,7 +225,7 @@ return [
     ],
     'GFX' => [
         'avif_quality' => 70,
-        'imagefile_ext' => 'gif,jpg,jpeg,png,webp,avif',
+        'imagefile_ext' => 'gif,jpg,jpeg,png,webp,avif,svg',
         'jpg_quality' => 70,
         'processor' => 'ImageMagick',
         'processor_allowUpscaling' => false,
