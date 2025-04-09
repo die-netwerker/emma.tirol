@@ -23,8 +23,8 @@ fields:
             title: Desktop
             allowedAspectRatios:
               desktop:
-                title: Hochformat
-                value: 0.9
+                title: Quadratisch
+                value: 1
           mobile:
             title: mobile Version
             allowedAspectRatios:
