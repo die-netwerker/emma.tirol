@@ -25,4 +25,4 @@ fields:
     type: Textarea
     useExistingField: true
     enableRichtext: true
-    richtextConfiguration: default
+    richtextConfiguration: minimal
