@@ -32,8 +32,7 @@ fields:
       - identifier: bodytext
         type: Textarea
         useExistingField: true
-        enableRichtext: true
-        richtextConfiguration: default
+        enableRichtext: false
   -
     identifier: image
     type: File 
