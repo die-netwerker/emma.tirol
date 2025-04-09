@@ -6,6 +6,7 @@ baseVariants:
   -
     base: 'https://emma.tirol.ddev.site/'
     condition: 'applicationContext == "Development"'
+contentSecurityPolicies: {  }
 dependencies:
   - netwerk/nw-template
 disableStaticFileCache: false
@@ -34,7 +35,66 @@ languages:
     flag: en-us-gb
     languageId: 1
 rootPageId: 1
-t3ai_company_description: ''
-t3ai_website_category: Retail
+settings:
+  styles:
+    content:
+      defaultHeaderType: 1
+      shortcut:
+        tables: tt_content
+      allowTags: 'a, abbr, acronym, address, article, aside, b, bdo, big, blockquote, br, caption, center, cite, code, col, colgroup, dd, del, dfn, dl, div, dt, em, figure, font, footer, header, h1, h2, h3, h4, h5, h6, hr, i, img, ins, kbd, label, li, link, mark, meta, nav, ol, p, pre, q, s, samp, sdfield, section, small, span, strike, strong, style, sub, sup, table, thead, tbody, tfoot, td, th, tr, title, tt, u, ul, var'
+      image:
+        lazyLoading: lazy
+        imageDecoding: ''
+      textmedia:
+        maxW: 600
+        maxWInText: 300
+        columnSpacing: 10
+        rowSpacing: 10
+        textMargin: 10
+        borderColor: '#000000'
+        borderWidth: 2
+        borderPadding: 0
+        linkWrap:
+          width: 800m
+          height: 600m
+          newWindow: false
+          lightboxEnabled: false
+          lightboxCssClass: lightbox
+          lightboxRelAttribute: 'lightbox[{field:uid}]'
+      links:
+        extTarget: _blank
+        keep: path
+    templates:
+      templateRootPath: 'EXT:nw_template/Resources/Private/ContentElements/Templates/'
+      partialRootPath: 'EXT:nw_template/Resources/Private/ContentElements/Partials/'
+      layoutRootPath: 'EXT:nw_template/Resources/Private/ContentElements/Layouts/'
+  site:
+    mainMenu: '2,5,6,8,7'
+    subMenu: ''
+    footerMenu: '7,9,10'
+    bottomMenu: ''
+    themeColor: '#fff'
+    name: 'Villa Emma'
+    owner: 'Herwig Kreidl'
+    phone: ''
+    phonelink: ''
+    mobile: '+43 676 5334027'
+    mobileLink: '00436765334027'
+    mail: hello@emma.tirol
+    street: 'Dorfstraße 16a'
+    postcode: '6275'
+    city: 'Stumm im Zillertal'
+    region: Tirol
+    country: Österreich
+    latitude: '47.293343'
+    longitude: '11.883903'
+    map: ''
+    description: ''
+    pricerange: ''
+    payments: ''
+    openinghours: ''
+    image: ''
+t3ai_company_description: 'Ferienhaus in Stumm im Zillertal für bis zu 10 Personen'
+t3ai_website_category: 'Travel and Hospitality'
 txCsseoXdefault: 0
-websiteTitle: ''
+websiteTitle: 'Villa Emma'
