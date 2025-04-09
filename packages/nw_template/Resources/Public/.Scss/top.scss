@@ -11,7 +11,11 @@
     justify-content:space-between;
     gap: 2em;
     color: #fff;
-   padding: 1em 4em;
+    padding: 1em 4em;
+    ul.languages{
+        display:flex;
+        gap: 0.1em;
+    }
     a, li{
         color: #fff;
         text-decoration: none;
@@ -35,10 +39,7 @@
         gap: 30px;
         align-items:center;
     }
-    .languages{
-        display:flex;
-        gap: 0.1em;
-    }
+    
     .cta{
         a{
             border: 1px solid #fff;
